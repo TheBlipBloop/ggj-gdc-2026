@@ -28,6 +28,8 @@ public class Game : MonoBehaviour
     [SerializeField]
     public UnityEvent<CardInfo> onCardPlayedListener;
 
+    private GameState gameState = new GameState();
+
     public static Card InstantiateCard(CardInfo cardInfo, Transform parent)
     {
         GameObject newInstance = Instantiate(instance.cardPrefab);
@@ -63,5 +65,13 @@ public class Game : MonoBehaviour
     {
         var newCard = instance.deck.DrawCard();
         instance.hand.AddCard(newCard);
+    }
+
+    public static void PlayCard(CardInfo cardInfo)
+    {
+        foreach (var effect in cardInfo.Effects)
+        {
+            instance.gameState = effect.Apply(instance.gameState);
+        }
     }
 }
