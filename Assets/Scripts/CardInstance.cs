@@ -16,15 +16,22 @@ public class CardInstance : MonoBehaviour
     [SerializeField]
     protected TMP_Text titleText;
 
+    [SerializeField]
+    protected Camera _camera;
+
+    [SerializeField]
+    protected RenderTexture _renderTextureBase;
+
     void Start()
     {
-        
+        _camera.forceIntoRenderTexture = true;
+        _camera.targetTexture = new RenderTexture(_renderTextureBase);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Bind(Card newCard)
@@ -32,6 +39,13 @@ public class CardInstance : MonoBehaviour
         card = newCard;
         front.texture = card.FrontTexture;
         back.texture = card.BackTexture;
-        titleText.text = card.name; 
+        titleText.text = card.name;
+
+        _camera.Render();
+    }
+
+    public Card GetCard()
+    {
+        return card;
     }
 }

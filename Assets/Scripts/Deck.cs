@@ -29,6 +29,4 @@ public class Deck : ScriptableObject
         int index = Random.Range(0, CardEntries.Length);
         return CardEntries[index].card;
     }
-
-
 }

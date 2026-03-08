@@ -1,5 +1,9 @@
+using System.Diagnostics.Tracing;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 // God class from hell.
@@ -8,14 +12,31 @@ public class Game : MonoBehaviour
 {
     public static Game instance;
 
+    [Header("Data")]
+
+    [SerializeField]
+    protected Deck deck;
+
     [SerializeField]
     protected GameObject cardPrefab;
 
-    public static CardInstance InstantiateCard(Transform parent)
+    [Header("Game")]
+
+    [SerializeField]
+    protected Hand hand;
+
+    protected UnityEvent<Card> onCardPlayedListener;
+
+
+    public static CardInstance InstantiateCard(Card cardInfo, Transform parent)
     {
         GameObject newInstance = Instantiate(instance.cardPrefab);
         newInstance.transform.SetParent(parent);
-        return newInstance.GetComponent<CardInstance>();
+
+        CardInstance cardInstance = newInstance.GetComponent<CardInstance>();
+        cardInstance.Bind(cardInfo);
+
+        return cardInstance;
     }
 
 
@@ -27,6 +48,20 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    public static void DrawCards(int count)
+    {
+        for (int i = 0; i < count; i++)
+        {
+            DrawCard();
+        }
+    }
+
+    public static void DrawCard()
+    {
+        var newCard = instance.deck.DrawCard();
+        instance.hand.AddCard(newCard);
     }
 }
