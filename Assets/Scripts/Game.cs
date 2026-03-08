@@ -25,8 +25,8 @@ public class Game : MonoBehaviour
     [SerializeField]
     protected Hand hand;
 
+    [SerializeField]
     protected UnityEvent<Card> onCardPlayedListener;
-
 
     public static CardInstance InstantiateCard(Card cardInfo, Transform parent)
     {
