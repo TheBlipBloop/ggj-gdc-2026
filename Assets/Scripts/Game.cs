@@ -66,12 +66,4 @@ public class Game : MonoBehaviour
         var newCard = instance.deck.DrawCard();
         instance.hand.AddCard(newCard);
     }
-
-    public static void PlayCard(CardInfo cardInfo)
-    {
-        foreach (var effect in cardInfo.Effects)
-        {
-            instance.gameState = effect.Apply(instance.gameState);
-        }
-    }
 }

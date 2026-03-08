@@ -10,4 +10,12 @@ public class CardInfo : ScriptableObject
     public string Name = "card";
     public string Description = "really awesome playing card";
     [SerializeField] public List<CardEffect> Effects = new List<CardEffect>();
+
+    public void Apply(GameState gameState)
+    {
+        foreach (var effect in Effects)
+        {
+            effect.Apply(gameState);
+        }
+    }
 }
