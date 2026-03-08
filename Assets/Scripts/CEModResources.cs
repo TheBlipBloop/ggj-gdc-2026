@@ -8,13 +8,11 @@ public class CEModResources : CardEffect
     public int MoodDelta;
     public int SacrificesDelta;
 
-    public override GameState Apply(GameState gameState)
+    public override void Apply(GameState gameState)
     {
-        var newState = gameState.Clone();
-        newState.guests += GuestsDelta;
-        newState.mood += MoodDelta;
-        newState.sacrifices += SacrificesDelta;
-
-        return newState;
+        
+        gameState.guests += GuestsDelta;
+        gameState.mood += MoodDelta;
+        gameState.sacrifices += SacrificesDelta;
     }
 }
