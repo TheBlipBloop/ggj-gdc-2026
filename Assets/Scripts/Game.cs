@@ -15,7 +15,7 @@ public class Game : MonoBehaviour
     [Header("Data")]
 
     [SerializeField]
-    protected Deck deck;
+    protected DeckInfo deck;
 
     [SerializeField]
     protected GameObject cardPrefab;
@@ -26,14 +26,14 @@ public class Game : MonoBehaviour
     protected Hand hand;
 
     [SerializeField]
-    protected UnityEvent<Card> onCardPlayedListener;
+    public UnityEvent<CardInfo> onCardPlayedListener;
 
-    public static CardInstance InstantiateCard(Card cardInfo, Transform parent)
+    public static Card InstantiateCard(CardInfo cardInfo, Transform parent)
     {
         GameObject newInstance = Instantiate(instance.cardPrefab);
         newInstance.transform.SetParent(parent);
 
-        CardInstance cardInstance = newInstance.GetComponent<CardInstance>();
+        Card cardInstance = newInstance.GetComponent<Card>();
         cardInstance.Bind(cardInfo);
 
         return cardInstance;

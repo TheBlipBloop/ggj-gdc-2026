@@ -5,9 +5,10 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     [SerializeField]
-    protected int handSize = 5;
+    protected List<Card> cards = new List<Card>();
 
-    protected List<CardInstance> cards = new List<CardInstance>();
+    [SerializeField]
+    protected Transform cardHoldler;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,12 +19,11 @@ public class Hand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
-    public void AddCard(Card card)
+    public void AddCard(CardInfo card)
     {
-        CardInstance newCard = Game.InstantiateCard(card, transform);
+        Card newCard = Game.InstantiateCard(card, cardHoldler);
         cards.Add(newCard);
     }
 
