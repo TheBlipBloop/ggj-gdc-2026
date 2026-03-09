@@ -2006,6 +2006,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1600409344}
     m_Modifications:
+    - target: {fileID: 3406427936399794489, guid: 21b12bbba2723479a83caa35d72d92bc, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5339971973944204844, guid: 21b12bbba2723479a83caa35d72d92bc, type: 3}
       propertyPath: m_Name
       value: CorpseCounter
