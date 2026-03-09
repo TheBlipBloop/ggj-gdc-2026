@@ -81,8 +81,6 @@ public class Hand : MonoBehaviour
         newCard.onStartHover.AddListener(() => HoverCard(newCard));
         newCard.onStopHover.AddListener(() => UnhoverCard(newCard));
 
-        print(newCardIndex);
-
         return newCard;
     }
 

@@ -154,4 +154,9 @@ public class Game : MonoBehaviour
         //TO DO
     }
 
+    public static int GetGuestCount()
+    {
+        return instance.gameState.guests;
+    }
+
 }
