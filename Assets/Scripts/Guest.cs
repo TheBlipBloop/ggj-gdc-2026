@@ -20,12 +20,13 @@ public class Guest : MonoBehaviour
     [SerializeField]
     protected MeshRenderer meshRenderer;
 
+    [SerializeField]
+    protected Color exitTint = new Color(0.7f, 0.7f, 0.7f, 1f);
+
     private Vector3 _destination = Vector3.zero;
 
     private float _restTimer = 0;
 
-    // just like me fr fr
-    // private bool _rested = false;
 
     [System.Serializable]
     public enum State
@@ -133,5 +134,6 @@ public class Guest : MonoBehaviour
     public void SetAsExiting()
     {
         exiting = true;
+        meshRenderer.material.color = exitTint;
     }
 }

@@ -15,6 +15,9 @@ public class Card : MonoBehaviour
     protected Image cardImage;
 
     [SerializeField]
+    protected Transform graphicsParent;
+
+    [SerializeField]
     protected MeshRenderer worldMesh;
 
     // [SerializeField]
@@ -51,18 +54,19 @@ public class Card : MonoBehaviour
 
     public void UpdateHovered()
     {
-        float uniformScale = transform.localScale.x;
-        float nextUniformScale = Mathf.MoveTowards(uniformScale, hoverScale, Time.deltaTime * 4f);
-        // transform.localScale = Vector3.one * nextUniformScale;
+        float uniformScale = graphicsParent.localScale.x;
+        float nextUniformScale = Mathf.MoveTowards(uniformScale, hoverScale, Time.deltaTime * 18f);
+        graphicsParent.localScale = Vector3.one * nextUniformScale;
 
         _positionOffset = Vector3.MoveTowards(_positionOffset, hoverPositionOffset, Time.deltaTime * 22f);
     }
 
     public void UpdateUnhovered()
     {
-        float uniformScale = transform.localScale.x;
-        float nextUniformScale = Mathf.MoveTowards(uniformScale, baseScale, Time.deltaTime * 28f);
-        // transform.localScale = Vector3.one * nextUniformScale;
+        float uniformScale = graphicsParent.localScale.x;
+        float nextUniformScale = Mathf.MoveTowards(uniformScale, baseScale, Time.deltaTime * 12f);
+        graphicsParent.localScale = Vector3.one * nextUniformScale;
+
 
         _positionOffset = Vector3.MoveTowards(_positionOffset, Vector3.zero, Time.deltaTime * 26f);
     }
@@ -107,5 +111,10 @@ public class Card : MonoBehaviour
     public Vector3 GetPositionOffset()
     {
         return _positionOffset;
+    }
+
+    public Transform GetGraphicsTransform()
+    {
+        return graphicsParent;
     }
 }
