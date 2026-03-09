@@ -33,6 +33,9 @@ public class Guest : MonoBehaviour
 
     private float _moveTimer = 0;
 
+    [SerializeField]
+    protected GameObject corpsePrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -103,7 +106,8 @@ public class Guest : MonoBehaviour
     public void Sacrifice()
     {
         // Destroy, spawn corpse, oowy goowy sound  TODO
-
+        Destroy(gameObject);
+        GameObject corpse = Instantiate(corpsePrefab, transform.position, transform.rotation);
     }
 
     public void SetMoveTarget(Vector3 newTarget)

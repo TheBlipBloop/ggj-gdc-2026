@@ -74,22 +74,28 @@ public class GuestEnclosure : MonoBehaviour
     protected void SacrificeGuest(Guest target)
     {
         target.Sacrifice();
-    }
-
-    public void RemoveGuest()
-    {
-        Destroy(guests[0]);
-        guests.RemoveAt(0);
+        guests.Remove(target);
+        print("sacrifce");
     }
 
     protected void OnGuestsChanged(int delta)
     {
-        int newGuestCount = Game.GetGuestCount();
+        Debug.Assert(delta != 0);
 
-        while (newGuestCount > guests.Count)
+        int newGuestCount = Game.GetGuestCount();
+        bool wasSacrifce = delta < 0;
+
+        if (wasSacrifce)
         {
-            Guest g = AddGuest();
-            g.SetMoveTarget(GetValidGuestPosition());
+            SacrificeGuests(delta);
+        }
+        else
+        {
+            while (newGuestCount > guests.Count)
+            {
+                Guest g = AddGuest();
+                g.SetMoveTarget(GetValidGuestPosition());
+            }
         }
     }
 

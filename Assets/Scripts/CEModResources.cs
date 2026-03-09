@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 
 [CreateAssetMenu(fileName = "CEModResources", menuName = "Scriptable Objects/CEModResources")]
 public class CEModResources : CardEffect
@@ -10,23 +11,33 @@ public class CEModResources : CardEffect
 
     public override void Apply(GameState gameState)
     {
-        gameState.guests += GuestsDelta;
-
-        if(GuestsDelta != 0)
+        int realDelta = TryChangeClammped(ref gameState.guests, GuestsDelta, 0, 10000);
+        if (realDelta != 0)
         {
-            Events.OnGuestsChanged.Invoke(GuestsDelta);
+            Events.OnGuestsChanged.Invoke(realDelta);
         }
 
-        gameState.mood += MoodDelta;
-        if(MoodDelta != 0)
+        Debug.Log(realDelta);
+
+        // TODO : Get real numbers from these from design group
+        realDelta = TryChangeClammped(ref gameState.mood, MoodDelta, -10, 4);
+        if (realDelta != 0)
         {
-            Events.OnMoodChanged.Invoke(MoodDelta);
+            Events.OnMoodChanged.Invoke(realDelta);
         }
 
-        gameState.sacrifices += SacrificesDelta;
-        if(SacrificesDelta != 0)
+        realDelta = TryChangeClammped(ref gameState.sacrifices, SacrificesDelta, 0, 100000);
+        if (realDelta != 0)
         {
-            Events.OnSacrificesChanged.Invoke(SacrificesDelta);
+            Events.OnSacrificesChanged.Invoke(realDelta);
         }
+    }
+
+    // ret @delta
+    private int TryChangeClammped(ref int target, int delta, int min, int max)
+    {
+        int prev = target;
+        target = Mathf.Clamp(target + delta, min, max);
+        return target - prev;
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
-  m_Name: AdmitOne
+  m_Name: KillOne
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 81359753db0a8feaabca3c783bd801fa, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Admit One
-  Description: Guests +1
+  Name: Sacrifice One
+  Description: Guests -1
   Effects:
-  - {fileID: 11400000, guid: f3a8424e2a61d4195803e0a2365eebbd, type: 2}
+  - {fileID: 11400000, guid: c6cd73dbed22892cca86f5b7ed1a2552, type: 2}
