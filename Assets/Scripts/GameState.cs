@@ -15,4 +15,11 @@ public class GameState
 
     public int turnNumber;
     public GamePhase phase;
+
+    public bool CanPlayCard(Card query)
+    {
+        // TODO
+
+        return true;
+    }
 }

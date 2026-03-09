@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Card : MonoBehaviour
@@ -10,8 +11,8 @@ public class Card : MonoBehaviour
     [SerializeField]
     protected RawImage front;
 
-    [SerializeField]
-    protected RawImage back;
+    // [SerializeField]
+    // protected RawImage back;
 
     [SerializeField]
     protected TMP_Text titleText;
@@ -22,6 +23,23 @@ public class Card : MonoBehaviour
     [SerializeField]
     protected RenderTexture _renderTextureBase;
 
+    [SerializeField]
+    protected float hoverScale = 1.2f;
+
+    [SerializeField]
+    protected Vector3 hoverPositionOffset = new Vector3(0, -0.5f, 0.5f);
+
+    [SerializeField]
+    protected float baseScale = 1.0f;
+
+    public UnityEvent onStartHover;
+
+    public UnityEvent onStopHover;
+
+    public UnityEvent onClicked;
+
+    private Vector3 _positionOffset = Vector3.zero;
+
     void Start()
     {
         _camera.forceIntoRenderTexture = true;
@@ -31,14 +49,31 @@ public class Card : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
 
+    public void UpdateHovered()
+    {
+        float uniformScale = transform.localScale.x;
+        float nextUniformScale = Mathf.MoveTowards(uniformScale, hoverScale, Time.deltaTime * 4f);
+        // transform.localScale = Vector3.one * nextUniformScale;
+
+        _positionOffset = Vector3.MoveTowards(_positionOffset, hoverPositionOffset, Time.deltaTime * 22f);
+    }
+
+    public void UpdateUnhovered()
+    {
+        float uniformScale = transform.localScale.x;
+        float nextUniformScale = Mathf.MoveTowards(uniformScale, baseScale, Time.deltaTime * 28f);
+        // transform.localScale = Vector3.one * nextUniformScale;
+
+        _positionOffset = Vector3.MoveTowards(_positionOffset, Vector3.zero, Time.deltaTime);
     }
 
     public void Bind(CardInfo newCard)
     {
         card = newCard;
         front.texture = card.FrontTexture;
-        back.texture = card.BackTexture;
+        // back.texture = card.BackTexture;
         titleText.text = card.name;
 
         _camera.Render();
@@ -47,5 +82,25 @@ public class Card : MonoBehaviour
     public CardInfo GetCard()
     {
         return card;
+    }
+
+    public void OnMouseEnter()
+    {
+        onStartHover.Invoke();
+    }
+
+    public void OnMouseExit()
+    {
+        onStopHover.Invoke();
+    }
+
+    public void OnMouseDown()
+    {
+        onClicked.Invoke();
+    }
+
+    public Vector3 GetPositionOffset()
+    {
+        return _positionOffset;
     }
 }
