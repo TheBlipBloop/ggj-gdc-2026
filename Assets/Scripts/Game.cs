@@ -33,7 +33,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     public UnityEvent<CardInfo> onCardPlayedListener;
 
-    private GameState gameState = new GameState();
+    public GameState gameState = new GameState();
 
     public static Card InstantiateCard(CardInfo cardInfo, Transform parent)
     {
