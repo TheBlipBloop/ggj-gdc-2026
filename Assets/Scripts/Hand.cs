@@ -29,7 +29,7 @@ public class Hand : MonoBehaviour
         cards.Add(newCard);
     }
 
-    public void PlayCard()
+    public void PlayCard(Card card)
     {
 
     }
