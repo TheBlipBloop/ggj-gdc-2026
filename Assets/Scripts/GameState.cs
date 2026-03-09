@@ -2,9 +2,9 @@ using UnityEngine;
 
 public enum GamePhase
 {
-    Prep,
-    Party,
-    Slaughter
+    Prep = 0,
+    Party = 1,
+    Slaughter = 2
 }
 
 public class GameState

@@ -5,31 +5,40 @@ using UnityEngine.InputSystem.Interactions;
 [CreateAssetMenu(fileName = "CEModResources", menuName = "Scriptable Objects/CEModResources")]
 public class CEModResources : CardEffect
 {
-    public int GuestsDelta;
+    public int GuestsDelta; // if killing, adds to sacrifice automatically. Ask B.
     public int MoodDelta;
     public int SacrificesDelta;
 
     public override void Apply(GameState gameState)
     {
-        int realDelta = TryChangeClammped(ref gameState.guests, GuestsDelta, 0, 10000);
-        if (realDelta != 0)
+        int realGuestDelta = TryChangeClammped(ref gameState.guests, GuestsDelta, 0, 10000);
+        if (realGuestDelta != 0)
         {
-            Events.OnGuestsChanged.Invoke(realDelta);
+            Events.OnGuestsChanged.Invoke(realGuestDelta);
+
+            // bad code 
+            if (realGuestDelta < 0)
+            {
+                int guh = TryChangeClammped(ref gameState.sacrifices, -realGuestDelta, 0, 100000);
+                if (guh != 0)
+                {
+                    Events.OnSacrificesChanged.Invoke(guh);
+                }
+            }
         }
 
-        Debug.Log(realDelta);
 
         // TODO : Get real numbers from these from design group
-        realDelta = TryChangeClammped(ref gameState.mood, MoodDelta, -10, 4);
-        if (realDelta != 0)
+        int realMoodDelta = TryChangeClammped(ref gameState.mood, MoodDelta, -10, 4);
+        if (realMoodDelta != 0)
         {
-            Events.OnMoodChanged.Invoke(realDelta);
+            Events.OnMoodChanged.Invoke(realMoodDelta);
         }
 
-        realDelta = TryChangeClammped(ref gameState.sacrifices, SacrificesDelta, 0, 100000);
-        if (realDelta != 0)
+        int realSacrificeDelta = TryChangeClammped(ref gameState.sacrifices, SacrificesDelta, 0, 100000);
+        if (realSacrificeDelta != 0)
         {
-            Events.OnSacrificesChanged.Invoke(realDelta);
+            Events.OnSacrificesChanged.Invoke(realSacrificeDelta);
         }
     }
 
