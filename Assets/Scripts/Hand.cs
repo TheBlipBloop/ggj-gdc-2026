@@ -23,10 +23,11 @@ public class Hand : MonoBehaviour
     {
     }
 
-    public void AddCard(CardInfo card)
+    public Card AddCard(CardInfo card)
     {
         Card newCard = Game.InstantiateCard(card, cardHoldler);
         cards.Add(newCard);
+        return newCard;
     }
 
     public void PlayCard(Card card)

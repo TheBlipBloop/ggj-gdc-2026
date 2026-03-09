@@ -61,19 +61,22 @@ public class Game : MonoBehaviour
     {
         for (int i = 0; i < count; i++)
         {
-            DrawCard();
+            var newCard = DrawCard();
+            Events.OnCardDrawn.Invoke(newCard);
         }
     }
 
-    public static void DrawCard()
+    public static Card DrawCard()
     {
-        var newCard = instance.deck.DrawCard();
-        instance.hand.AddCard(newCard);
+        var newCardInfo = instance.deck.DrawCard();
+        var newCard = instance.hand.AddCard(newCardInfo);
+        return newCard;
     }
 
     public static void PlayCard(Card card)
     {
         instance.hand.PlayCard(card);
+        Events.OnCardPlayed.Invoke(card);
         EndTurn();
     }
 
@@ -86,16 +89,13 @@ public class Game : MonoBehaviour
 
     public static void DiscardHand()
     {
-        int cardCount = instance.hand.CardCount;
-        for (int i = 0; i < cardCount; i++)
-        {
-            DiscardCard(i);
-        }
+        // TO DO
     }
 
     private static void DiscardCard(int index)
     {
         // TO DO
+        // Also make sure to invoke the OnCardDiscarded event
     }
 
     public static void EndTurn()
@@ -108,18 +108,23 @@ public class Game : MonoBehaviour
     {
         if (instance.gameState.phase == GamePhase.Prep)
         {
+            Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
+            Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeParty);
         }
         else if (instance.gameState.phase == GamePhase.Party)
         {
+            Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
+            Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeSlaughter);
         }
         if (instance.gameState.phase == GamePhase.Slaughter)
         {
+            Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             EndGame();
         }
     }
