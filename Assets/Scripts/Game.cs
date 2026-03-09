@@ -34,7 +34,7 @@ public class Game : MonoBehaviour
     [SerializeField] protected Transform playPosition;
 
     [SerializeField]
-    protected MoodThresholds moodThresholds;
+    public MoodThresholds moodThresholds;
     public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
     public int MinMood => moodThresholds.thresholds[0].threshold;
     public int MaxMood => moodThresholds.thresholds[moodThresholds.thresholds.Length - 1].threshold;

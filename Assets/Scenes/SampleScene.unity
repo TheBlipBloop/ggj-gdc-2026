@@ -1837,6 +1837,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoodMeter
       objectReference: {fileID: 0}
+    - target: {fileID: 4823589591831215518, guid: 34cc27aeb462748e9af7fd307be0c5a8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823589591831215518, guid: 34cc27aeb462748e9af7fd307be0c5a8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823589591831215518, guid: 34cc27aeb462748e9af7fd307be0c5a8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823589591831215518, guid: 34cc27aeb462748e9af7fd307be0c5a8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5140546842253577405, guid: 34cc27aeb462748e9af7fd307be0c5a8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
