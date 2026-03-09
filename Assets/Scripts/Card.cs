@@ -74,7 +74,7 @@ public class Card : MonoBehaviour
         descriptionText.text = card.Description;
         // back.texture = card.BackTexture;
         cardImage.sprite = card.cardImage;
-        titleText.text = card.name;
+        titleText.text = card.Name;
 
         _camera.forceIntoRenderTexture = true;
         _camera.targetTexture = new RenderTexture(_renderTextureBase);
