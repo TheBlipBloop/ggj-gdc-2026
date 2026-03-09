@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8510db68caa4d41f3807bde5aa9e8d0a, type: 3}
+  m_Name: SoundMappings
+  m_EditorClassIdentifier: Assembly-CSharp::SoundMappings
+  mappings:
+  - eventName: 4
+    clip: {fileID: 8300000, guid: 6e694e984ed0fe84bb2e5ae6c4aa53fc, type: 3}
+  - eventName: 0
+    clip: {fileID: 8300000, guid: e0871231915c64f41b816b5bc8558288, type: 3}
+  - eventName: 2
+    clip: {fileID: 8300000, guid: c9e868099f038d74097118a9cd7848f1, type: 3}
+  - eventName: 3
+    clip: {fileID: 8300000, guid: a525b574f46d97548aa2c9ef1d6d04ad, type: 3}
+  - eventName: 5
+    clip: {fileID: 8300000, guid: c0efdbfe0d78e7d44903dfbf52db6766, type: 3}
+  - eventName: 1
+    clip: {fileID: 8300000, guid: 8300553b977510d48a9e3659a16bd71a, type: 3}
+  - eventName: 10
+    clip: {fileID: 8300000, guid: de8ba1a856f9b2a448f5154b1efdb9a1, type: 3}
+  - eventName: 11
+    clip: {fileID: 8300000, guid: ded3aaf782e80bf4abf7b88667cd1d2a, type: 3}
+  - eventName: 12
+    clip: {fileID: 8300000, guid: e3776687313558b4e96a4e7a72db50fc, type: 3}
+  - eventName: 6
+    clip: {fileID: 8300000, guid: 6b34a51828ae25846af3d982bcab82c2, type: 3}
+  - eventName: 13
+    clip: {fileID: 8300000, guid: b80df472a0f8e3d4280a3247888731f6, type: 3}
+  - eventName: 7
+    clip: {fileID: 8300000, guid: 2e3107bffdb48c748b201584fbd6736d, type: 3}
+  - eventName: 14
+    clip: {fileID: 8300000, guid: dc22ff06efb42d04aa6a3db074d158bd, type: 3}
+  - eventName: 15
+    clip: {fileID: 8300000, guid: 2b7c97108066eaa418cf8ec4a5087e93, type: 3}
