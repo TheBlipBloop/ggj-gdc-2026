@@ -86,6 +86,7 @@ public class Hand : MonoBehaviour
 
     public void PlayCard(Card card)
     {
+        
         DiscardCard(card);
         ResetSelection();
     }

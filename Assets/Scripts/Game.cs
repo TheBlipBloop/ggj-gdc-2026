@@ -83,6 +83,7 @@ public class Game : MonoBehaviour
         }
 
         instance.hand.PlayCard(card);
+        card.card.Apply(instance.gameState);
         Events.OnCardPlayed.Invoke(card);
 
         EndTurn();

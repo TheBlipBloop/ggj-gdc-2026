@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     [SerializeField]
-    protected CardInfo card = null;
+    public CardInfo card = null;
 
     [SerializeField]
     protected RawImage front;

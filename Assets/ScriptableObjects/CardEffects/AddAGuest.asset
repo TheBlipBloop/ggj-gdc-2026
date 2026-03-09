@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676140f53ac8d4cbfb71020556cd8ffe, type: 3}
   m_Name: AddAGuest
   m_EditorClassIdentifier: Assembly-CSharp::CEModResources
-  GuestsDelta: 0
+  GuestsDelta: 1
   MoodDelta: 0
   SacrificesDelta: 0
