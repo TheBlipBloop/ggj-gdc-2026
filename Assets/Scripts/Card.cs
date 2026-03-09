@@ -18,6 +18,9 @@ public class Card : MonoBehaviour
     protected TMP_Text titleText;
 
     [SerializeField]
+    protected TMP_Text descriptionText;
+
+    [SerializeField]
     protected Camera _camera;
 
     [SerializeField]
@@ -73,6 +76,7 @@ public class Card : MonoBehaviour
     {
         card = newCard;
         front.texture = card.FrontTexture;
+        descriptionText.text = card.Description;
         // back.texture = card.BackTexture;
         titleText.text = card.name;
 
