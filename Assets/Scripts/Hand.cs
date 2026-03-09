@@ -28,7 +28,7 @@ public class Hand : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cards.Clear();
+        // cards.Clear();
     }
 
     // Update is called once per frame
@@ -80,6 +80,8 @@ public class Hand : MonoBehaviour
 
         newCard.onStartHover.AddListener(() => HoverCard(newCardIndex));
         newCard.onStopHover.AddListener(() => UnhoverCard(newCardIndex));
+
+        print(newCardIndex);
 
         return newCard;
     }

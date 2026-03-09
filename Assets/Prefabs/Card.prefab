@@ -40,7 +40,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4483918774811811816}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -81,7 +81,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!114 &5428909235623467737
@@ -188,7 +188,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.142857, y: 10, z: 1}
+  m_LocalScale: {x: 7.14, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6881430301446940236}
@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardInstance
   card: {fileID: 0}
   front: {fileID: 3420208644487195648}
+  worldMesh: {fileID: 131472122295548536}
   titleText: {fileID: 1737333348203878006}
   descriptionText: {fileID: 3501987159130330093}
   _camera: {fileID: 6254834025829576}
@@ -424,38 +425,6 @@ PrefabInstance:
     - target: {fileID: 2098040901313956625, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -125
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Name

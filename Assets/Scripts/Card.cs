@@ -11,6 +11,9 @@ public class Card : MonoBehaviour
     [SerializeField]
     protected RawImage front;
 
+    [SerializeField]
+    protected MeshRenderer worldMesh;
+
     // [SerializeField]
     // protected RawImage back;
 
@@ -45,8 +48,6 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-        _camera.forceIntoRenderTexture = true;
-        _camera.targetTexture = new RenderTexture(_renderTextureBase);
     }
 
     // Update is called once per frame
@@ -69,7 +70,7 @@ public class Card : MonoBehaviour
         float nextUniformScale = Mathf.MoveTowards(uniformScale, baseScale, Time.deltaTime * 28f);
         // transform.localScale = Vector3.one * nextUniformScale;
 
-        _positionOffset = Vector3.MoveTowards(_positionOffset, Vector3.zero, Time.deltaTime);
+        _positionOffset = Vector3.MoveTowards(_positionOffset, Vector3.zero, Time.deltaTime * 26f);
     }
 
     public void Bind(CardInfo newCard)
@@ -79,6 +80,11 @@ public class Card : MonoBehaviour
         descriptionText.text = card.Description;
         // back.texture = card.BackTexture;
         titleText.text = card.name;
+
+        _camera.forceIntoRenderTexture = true;
+        _camera.targetTexture = new RenderTexture(_renderTextureBase);
+
+        worldMesh.material.mainTexture = _camera.targetTexture;
 
         _camera.Render();
     }

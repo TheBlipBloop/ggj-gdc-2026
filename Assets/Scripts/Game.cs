@@ -50,6 +50,10 @@ public class Game : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
         StartGame();
     }
 
