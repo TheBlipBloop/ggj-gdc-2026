@@ -15,6 +15,6 @@ MonoBehaviour:
   CardEntries:
   - card: {fileID: 11400000, guid: c20cf832d036043aab2da9439ccdf657, type: 2}
     weight: 1
-  - card: {fileID: 11400000, guid: c20cf832d036043aab2da9439ccdf657, type: 2}
+  - card: {fileID: 11400000, guid: 2c4540d6c885720189f6fb28a0bf5d14, type: 2}
     weight: 1
   CardCount: 100
