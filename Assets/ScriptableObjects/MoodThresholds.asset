@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a064fdfe3000498da5ed5682cc17c5d, type: 3}
+  m_Name: MoodThresholds
+  m_EditorClassIdentifier: Assembly-CSharp::MoodThresholds
+  thresholds:
+  - threshold: -10
+    guestDelta: -7
+  - threshold: -9
+    guestDelta: -6
+  - threshold: -7
+    guestDelta: -5
+  - threshold: -5
+    guestDelta: -4
+  - threshold: -3
+    guestDelta: -3
+  - threshold: -2
+    guestDelta: -2
+  - threshold: -1
+    guestDelta: -1
+  - threshold: 0
+    guestDelta: 0
+  - threshold: 1
+    guestDelta: 1
+  - threshold: 4
+    guestDelta: 2
+  - threshold: 10
+    guestDelta: 3
