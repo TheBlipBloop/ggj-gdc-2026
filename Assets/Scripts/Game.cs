@@ -11,6 +11,10 @@ using UnityEngine.UI;
 public class Game : MonoBehaviour
 {
     public static Game instance;
+    
+    public static int handSizePrep = 3;
+    public static int handSizeParty = 5;
+    public static int handSizeSlaughter = 3;
 
     [Header("Data")]
 
@@ -47,10 +51,10 @@ public class Game : MonoBehaviour
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static void StartGame()
     {
-
+        instance.gameState = new GameState();
+        DrawCards(handSizePrep);
     }
 
     public static void DrawCards(int count)
@@ -65,5 +69,63 @@ public class Game : MonoBehaviour
     {
         var newCard = instance.deck.DrawCard();
         instance.hand.AddCard(newCard);
+    }
+
+    public static void PlayCard(Card card)
+    {
+        instance.hand.PlayCard(card);
+        EndTurn();
+    }
+
+    public static void ReplaceHand()
+    {
+        int cardCount = instance.hand.CardCount;
+        DiscardHand();
+        DrawCards(cardCount);
+    }
+
+    public static void DiscardHand()
+    {
+        int cardCount = instance.hand.CardCount;
+        for (int i = 0; i < cardCount; i++)
+        {
+            DiscardCard(i);
+        }
+    }
+
+    private static void DiscardCard(int index)
+    {
+        // TO DO
+    }
+
+    public static void EndTurn()
+    {
+        instance.gameState.turnNumber++;
+        DrawCard();
+    }
+
+    public static void EndPhase()
+    {
+        if (instance.gameState.phase == GamePhase.Prep)
+        {
+            DiscardHand();
+            instance.gameState.phase++;
+            DrawCards(handSizeParty);
+        }
+        else if (instance.gameState.phase == GamePhase.Party)
+        {
+            DiscardHand();
+            instance.gameState.phase++;
+            DrawCards(handSizeSlaughter);
+        }
+        if (instance.gameState.phase == GamePhase.Slaughter)
+        {
+            EndGame();
+        }
+    }
+
+    public static void EndGame()
+    {
+        //TO DO
     }
 }
