@@ -75,7 +75,6 @@ public class GuestEnclosure : MonoBehaviour
     {
         target.Sacrifice();
         guests.Remove(target);
-        print("sacrifce");
     }
 
     protected void OnGuestsChanged(int delta)
@@ -87,7 +86,7 @@ public class GuestEnclosure : MonoBehaviour
 
         if (wasSacrifce)
         {
-            SacrificeGuests(delta);
+            SacrificeGuests(-delta);
         }
         else
         {
