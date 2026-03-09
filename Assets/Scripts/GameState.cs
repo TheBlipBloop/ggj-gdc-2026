@@ -32,19 +32,30 @@ public class GameState
         }
     }
 
+    public void KillGuests(int count)
+    {
+        int realGuestDelta = TryChangeClammped(ref guests, -1 * count, 0, 10000);
+        if (realGuestDelta != 0)
+        {
+            ChangeSacrifices(Mathf.Abs(realGuestDelta));
+            Events.OnGuestsChanged.Invoke(realGuestDelta);
+            Events.OnGuestKilled.Invoke(Mathf.Abs(realGuestDelta));
+        }
+    }
+
     public int ChangeGuests(int delta, bool killing = false)
     {
         int realGuestDelta = TryChangeClammped(ref guests, delta, 0, 10000);
         if (realGuestDelta != 0)
         {
             Events.OnGuestsChanged.Invoke(realGuestDelta);
-
         }
 
         if (realGuestDelta < 0)
         {
             if (killing)
             {
+                Debug.LogError("Shouldn't use this to kill guests.");
                 Events.OnGuestKilled.Invoke(Mathf.Abs(realGuestDelta));
             }
             else

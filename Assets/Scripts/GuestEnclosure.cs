@@ -32,7 +32,7 @@ public class GuestEnclosure : MonoBehaviour
 
         // Events.OnGuestsChanged.AddListener(OnGuestsChanged);
         Events.OnGuestsAdded.AddListener(OnGuestsAdded);
-        Events.OnGuestKilled.AddListener(OnGuestKilled);
+        Events.OnGuestKilled.AddListener(SacrificeGuests);
         Events.OnGuestLeaves.AddListener(OnGuestLeave);
     }
 
@@ -89,30 +89,9 @@ public class GuestEnclosure : MonoBehaviour
         guests.Remove(target);
     }
 
-    protected void OnGuestsChanged(int delta)
-    {
-
-    }
-
     protected void OnGuestKilled(int delta)
     {
-        Debug.Assert(delta != 0);
-
-        int newGuestCount = Game.GetGuestCount();
-        bool wasSacrifce = delta < 0;
-
-        if (wasSacrifce)
-        {
             SacrificeGuests(Mathf.Abs(delta));
-        }
-        else
-        {
-            while (newGuestCount > guests.Count)
-            {
-                Guest g = AddGuest();
-                g.SetMoveTarget(GetValidGuestPosition());
-            }
-        }
     }
 
     protected void OnGuestLeave(int delta)

@@ -16,6 +16,8 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Murder on the Dancefloor
   cardImage: {fileID: 21300000, guid: 38ad740e5b7754f64b7dc9a8d99dd2c6, type: 3}
-  Description: Kill a Guest
+  Description: 'Kill a Guest
+
+    Mood -4'
   Effects:
   - {fileID: 11400000, guid: 4a1657360d23d17f18789de2783f3971, type: 2}
