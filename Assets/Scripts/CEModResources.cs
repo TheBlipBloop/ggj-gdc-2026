@@ -27,9 +27,7 @@ public class CEModResources : CardEffect
             }
         }
 
-
-        // TODO : Get real numbers from these from design group
-        int realMoodDelta = TryChangeClammped(ref gameState.mood, MoodDelta, -10, 4);
+        int realMoodDelta = TryChangeClammped(ref gameState.mood, MoodDelta, Game.instance.MinMood, Game.instance.MaxMood);
         if (realMoodDelta != 0)
         {
             Events.OnMoodChanged.Invoke(realMoodDelta);
