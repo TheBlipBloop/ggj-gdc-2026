@@ -16,6 +16,8 @@ public class Game : MonoBehaviour
     public static int handSizePrep = 3;
     public static int handSizeParty = 5;
     public static int handSizeSlaughter = 3;
+    public static int prepTurns = 1;
+    public static int partyTurns = 9;
 
     [Header("Data")]
 
@@ -121,7 +123,19 @@ public class Game : MonoBehaviour
     public static void EndTurn()
     {
         instance.gameState.turnNumber++;
-        DrawCard();
+
+        if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber > prepTurns)
+        {
+            EndPhase();
+        }
+        else if(instance.gameState.phase == GamePhase.Party && instance.gameState.turnNumber > partyTurns)
+        {
+            EndPhase();
+        }
+        else
+        {
+            DrawCard();    
+        }
     }
 
     public static void EndPhase()
@@ -131,6 +145,7 @@ public class Game : MonoBehaviour
             Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
+            instance.gameState.turnNumber = 0;
             Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeParty);
         }
@@ -139,6 +154,7 @@ public class Game : MonoBehaviour
             Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
+            instance.gameState.turnNumber = 0;
             Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeSlaughter);
         }
