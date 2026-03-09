@@ -38,7 +38,6 @@ public class GameState
         int realGuestDelta = TryChangeClammped(ref guests, delta, 0, 10000);
         if (realGuestDelta != 0)
         {
-            guests += realGuestDelta;
             Events.OnGuestsChanged.Invoke(realGuestDelta);
         }
     }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SacrificeOneGuest
   m_EditorClassIdentifier: Assembly-CSharp::CEModResources
   GuestsDelta: -1
-  MoodDelta: 0
+  MoodDelta: -4
   SacrificesDelta: 0

@@ -1155,17 +1155,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3070782556006180698, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 11400000, guid: 71ef8c8850a63ff6a807fd23ee8989ba, type: 2}
-    - target: {fileID: 3070782556006180698, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
       propertyPath: hand
       value: 
       objectReference: {fileID: 1800053272}
-    - target: {fileID: 3070782556006180698, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
-      propertyPath: cardPrefab
-      value: 
-      objectReference: {fileID: 6326223263248141382, guid: cfb81ca30d90d9895b7467b4ca2a75f8, type: 3}
     - target: {fileID: 7792482824862086792, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
       propertyPath: m_Name
       value: Game

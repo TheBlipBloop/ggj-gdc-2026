@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -159,6 +160,10 @@ public class Game : MonoBehaviour
         {
             EndPhase();
         }
+        else if(instance.gameState.phase == GamePhase.Slaughter && instance.gameState.guests <= 0)
+        {
+            EndPhase();
+        }
         else
         {
             DrawCard();    
@@ -185,7 +190,7 @@ public class Game : MonoBehaviour
             Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeSlaughter);
         }
-        if (instance.gameState.phase == GamePhase.Slaughter)
+        else if (instance.gameState.phase == GamePhase.Slaughter)
         {
             Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             EndGame();
@@ -194,11 +199,12 @@ public class Game : MonoBehaviour
 
     public static void EndGame()
     {
-        //TO DO
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public static int GetGuestCount()
     {
+        Debug.Log("Game Over, Score: " + instance.gameState.sacrifices);
         return instance.gameState.guests;
     }
 
