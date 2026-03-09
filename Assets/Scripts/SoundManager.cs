@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
         Events.OnMoodChanged.AddListener((int delta) => PlaySound(delta > 0 ? SoundEvent.MoodGained : SoundEvent.MoodLost));
         Events.OnGuestsChanged.AddListener((int delta) => PlaySound(delta > 0 ? SoundEvent.GuestJoined : SoundEvent.GuestLeft));
         Events.OnSacrificesChanged.AddListener((int delta) => PlaySound(delta > 0 ? SoundEvent.GuestRevived : SoundEvent.GuestMurdered));
+
     }
 
     void OnDisable()
@@ -41,6 +42,7 @@ public class SoundManager : MonoBehaviour
         Events.OnMoodChanged.RemoveListener((int delta) => PlaySound(delta > 0 ? SoundEvent.MoodGained : SoundEvent.MoodLost));
         Events.OnGuestsChanged.RemoveListener((int delta) => PlaySound(delta > 0 ? SoundEvent.GuestJoined : SoundEvent.GuestLeft));
         Events.OnSacrificesChanged.RemoveListener((int delta) => PlaySound(delta > 0 ? SoundEvent.GuestRevived : SoundEvent.GuestMurdered));
+
     }
 
     public void PlaySound(AudioClip clip)
