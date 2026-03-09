@@ -14,6 +14,12 @@ public class Guest : MonoBehaviour
     [SerializeField]
     protected Transform graphicsParent;
 
+    [SerializeField]
+    protected Texture2D[] guestTextures;
+
+    [SerializeField]
+    protected MeshRenderer meshRenderer;
+
     private Vector3 _destination = Vector3.zero;
 
     private float _restTimer = 0;
@@ -39,7 +45,7 @@ public class Guest : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        meshRenderer.material.mainTexture = guestTextures[Random.Range(0, guestTextures.Length)];
     }
 
     // Update is called once per frame
