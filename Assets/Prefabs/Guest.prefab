@@ -61,7 +61,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 3, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8933949434829380889}
@@ -194,4 +194,9 @@ MonoBehaviour:
   restDurationMin: 1
   restDurationMax: 8
   graphicsParent: {fileID: 8933949434829380889}
+  guestTextures:
+  - {fileID: 2800000, guid: 98b85de5e8222396a90b9348f6fe6104, type: 3}
+  - {fileID: 2800000, guid: 72dad62b6bfc3ba4a9915430ac3efd4f, type: 3}
+  - {fileID: 2800000, guid: 660cb7c3faa058f1b812eec96941f4cb, type: 3}
+  meshRenderer: {fileID: 4737935340918016420}
   corpsePrefab: {fileID: 9016632934684684073, guid: 865632434fe08123f80c76b7ae4375d3, type: 3}
