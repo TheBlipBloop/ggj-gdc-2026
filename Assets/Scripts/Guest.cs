@@ -25,7 +25,7 @@ public class Guest : MonoBehaviour
     private float _restTimer = 0;
 
     // just like me fr fr
-    private bool _rested = false;
+    // private bool _rested = false;
 
     [System.Serializable]
     public enum State
@@ -36,6 +36,8 @@ public class Guest : MonoBehaviour
     }
 
     protected State state = State.Move;
+
+    protected bool exiting = false;
 
     private float _moveTimer = 0;
 
@@ -62,6 +64,11 @@ public class Guest : MonoBehaviour
             {
                 _restTimer = Random.Range(restDurationMin, restDurationMax);
                 state = State.Rest;
+            }
+
+            if (complete && exiting)
+            {
+                Destroy(gameObject);
             }
 
             SetGraphicsHeightOffset(Mathf.Sin(_moveTimer * 3f) * 0.1f);
@@ -121,5 +128,10 @@ public class Guest : MonoBehaviour
         _destination = newTarget;
         _restTimer = 0;
         state = State.Move;
+    }
+
+    public void SetAsExiting()
+    {
+        exiting = true;
     }
 }

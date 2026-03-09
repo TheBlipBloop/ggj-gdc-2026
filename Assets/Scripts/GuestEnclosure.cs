@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class GuestEnclosure : MonoBehaviour
@@ -28,7 +30,10 @@ public class GuestEnclosure : MonoBehaviour
         _enclosureBounds.size = enclosureBoundsSource.size;
         _enclosureBounds.center = enclosureBoundsSource.center;
 
-        Events.OnGuestsChanged.AddListener(OnGuestsChanged);
+        // Events.OnGuestsChanged.AddListener(OnGuestsChanged);
+        Events.OnGuestsAdded.AddListener(OnGuestsAdded);
+        Events.OnGuestKilled.AddListener(OnGuestKilled);
+        Events.OnGuestLeaves.AddListener(OnGuestLeave);
     }
 
     // Update is called once per frame
@@ -77,7 +82,19 @@ public class GuestEnclosure : MonoBehaviour
         guests.Remove(target);
     }
 
+    protected void ExitGuest(Guest target)
+    {
+        target.SetMoveTarget(entrance.position);
+        target.SetAsExiting();
+        guests.Remove(target);
+    }
+
     protected void OnGuestsChanged(int delta)
+    {
+
+    }
+
+    protected void OnGuestKilled(int delta)
     {
         Debug.Assert(delta != 0);
 
@@ -86,7 +103,7 @@ public class GuestEnclosure : MonoBehaviour
 
         if (wasSacrifce)
         {
-            SacrificeGuests(-delta);
+            SacrificeGuests(Mathf.Abs(delta));
         }
         else
         {
@@ -95,6 +112,22 @@ public class GuestEnclosure : MonoBehaviour
                 Guest g = AddGuest();
                 g.SetMoveTarget(GetValidGuestPosition());
             }
+        }
+    }
+
+    protected void OnGuestLeave(int delta)
+    {
+        for (int i = 0; i < delta; i++)
+        {
+            ExitGuest(FindRandomGuest());
+        }
+    }
+
+    protected void OnGuestsAdded(int newGuestCount)
+    {
+        for (int i = 0; i < newGuestCount; i++)
+        {
+            AddGuest();
         }
     }
 
