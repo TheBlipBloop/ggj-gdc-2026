@@ -12,6 +12,9 @@ public class Card : MonoBehaviour
     protected RawImage front;
 
     [SerializeField]
+    protected Image cardImage;
+
+    [SerializeField]
     protected MeshRenderer worldMesh;
 
     // [SerializeField]
@@ -46,15 +49,6 @@ public class Card : MonoBehaviour
 
     private Vector3 _positionOffset = Vector3.zero;
 
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void UpdateHovered()
     {
         float uniformScale = transform.localScale.x;
@@ -79,6 +73,7 @@ public class Card : MonoBehaviour
         front.texture = card.FrontTexture;
         descriptionText.text = card.Description;
         // back.texture = card.BackTexture;
+        cardImage.sprite = card.cardImage;
         titleText.text = card.name;
 
         _camera.forceIntoRenderTexture = true;

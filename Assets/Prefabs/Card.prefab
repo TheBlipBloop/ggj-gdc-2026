@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardInstance
   card: {fileID: 0}
   front: {fileID: 3420208644487195648}
+  cardImage: {fileID: 686702079169732009}
   worldMesh: {fileID: 131472122295548536}
   titleText: {fileID: 1737333348203878006}
   descriptionText: {fileID: 3501987159130330093}
@@ -439,6 +440,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+--- !u!114 &686702079169732009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1124029254264432079, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+  m_PrefabInstance: {fileID: 441068272750377062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &1737333348203878006 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
