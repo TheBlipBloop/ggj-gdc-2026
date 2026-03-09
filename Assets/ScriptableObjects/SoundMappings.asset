@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundMappings
   mappings:
   - eventName: 4
-    clip: {fileID: 8300000, guid: 6e694e984ed0fe84bb2e5ae6c4aa53fc, type: 3}
+    clip: {fileID: 8300000, guid: 9a6198a3f7257ed4faa5571522d7a9d6, type: 3}
   - eventName: 0
     clip: {fileID: 8300000, guid: e0871231915c64f41b816b5bc8558288, type: 3}
   - eventName: 2
@@ -22,11 +22,11 @@ MonoBehaviour:
   - eventName: 3
     clip: {fileID: 8300000, guid: a525b574f46d97548aa2c9ef1d6d04ad, type: 3}
   - eventName: 5
-    clip: {fileID: 8300000, guid: c0efdbfe0d78e7d44903dfbf52db6766, type: 3}
+    clip: {fileID: 8300000, guid: 0732630843e62e64588232c63dc4abed, type: 3}
   - eventName: 1
     clip: {fileID: 8300000, guid: 8300553b977510d48a9e3659a16bd71a, type: 3}
   - eventName: 10
-    clip: {fileID: 8300000, guid: de8ba1a856f9b2a448f5154b1efdb9a1, type: 3}
+    clip: {fileID: 8300000, guid: bc1f586245c2f51439df7de293bcc4c8, type: 3}
   - eventName: 11
     clip: {fileID: 8300000, guid: ded3aaf782e80bf4abf7b88667cd1d2a, type: 3}
   - eventName: 12
