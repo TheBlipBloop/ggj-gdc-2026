@@ -37,7 +37,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b80df472a0f8e3d4280a3247888731f6, type: 3}
   - eventName: 7
     clip: {fileID: 8300000, guid: 2e3107bffdb48c748b201584fbd6736d, type: 3}
-  - eventName: 14
+  - eventName: 13
     clip: {fileID: 8300000, guid: dc22ff06efb42d04aa6a3db074d158bd, type: 3}
-  - eventName: 15
+  - eventName: 12
     clip: {fileID: 8300000, guid: 2b7c97108066eaa418cf8ec4a5087e93, type: 3}
