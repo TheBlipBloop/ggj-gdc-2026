@@ -7,6 +7,8 @@ public class Hand : MonoBehaviour
     [SerializeField]
     protected List<Card> cards = new List<Card>();
 
+    public int CardCount => cards.Count;
+
     [SerializeField]
     protected Transform cardHoldler;
 
