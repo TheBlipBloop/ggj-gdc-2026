@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8853536edfd66e3968aff7117095ec42, type: 3}
+  m_Name: PartyDeck
+  m_EditorClassIdentifier: Assembly-CSharp::Deck
+  CardEntries:
+  - card: {fileID: 11400000, guid: c20cf832d036043aab2da9439ccdf657, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: ec7c72730b9a95eb68517cbba38fabac, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 623cfe0d4df5c4dc58699816331b02d2, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: cbd97e629192943cc9dbbdf6a0de1c4e, type: 2}
+    weight: 1
+  CardCount: 100

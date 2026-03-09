@@ -44,9 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1193e03598e4d1c91903fd5123f938fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameUtils
-  deck: {fileID: 0}
+  phaseDecks:
+  - phase: 0
+    deck: {fileID: 11400000, guid: bff85f11fedd445279ad1003bb9abde1, type: 2}
+  - phase: 1
+    deck: {fileID: 11400000, guid: 71ef8c8850a63ff6a807fd23ee8989ba, type: 2}
+  - phase: 2
+    deck: {fileID: 11400000, guid: bde22f4d7264643c78a1e3a6e039858e, type: 2}
   moodThresholds: {fileID: 11400000, guid: eb2cb5fa4c62849f48cd645c31d17ae9, type: 2}
-  cardPrefab: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+  cardPrefab: {fileID: 6326223263248141382, guid: cfb81ca30d90d9895b7467b4ca2a75f8, type: 3}
   hand: {fileID: 0}
   onCardPlayedListener:
     m_PersistentCalls:

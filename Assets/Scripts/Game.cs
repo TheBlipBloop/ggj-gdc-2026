@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
+[System.Serializable]
+public class PhaseDeck
+{
+    public GamePhase phase;
+    public DeckInfo deck;
+}
+
 // God class from hell.
 // Static doer
 public class Game : MonoBehaviour
@@ -20,9 +27,8 @@ public class Game : MonoBehaviour
     public static int partyTurns = 9;
 
     [Header("Data")]
-
     [SerializeField]
-    protected DeckInfo deck;
+    protected PhaseDeck[] phaseDecks;
     
     [SerializeField]
     protected MoodThresholds moodThresholds;
@@ -42,6 +48,19 @@ public class Game : MonoBehaviour
     public UnityEvent<CardInfo> onCardPlayedListener;
 
     public GameState gameState = new GameState();
+
+    public static DeckInfo GetDeckForPhase(GamePhase phase)
+    {
+        foreach (var phaseDeck in instance.phaseDecks)
+        {
+            if (phaseDeck.phase == phase)
+            {
+                return phaseDeck.deck;
+            }
+        }
+
+        return null;
+    }
 
     public static Card InstantiateCard(CardInfo cardInfo, Transform parent)
     {
@@ -82,7 +101,7 @@ public class Game : MonoBehaviour
 
     public static Card DrawCard()
     {
-        var newCardInfo = instance.deck.DrawCard();
+        var newCardInfo = GetDeckForPhase(instance.gameState.phase).DrawCard();
         var newCard = instance.hand.AddCard(newCardInfo);
         return newCard;
     }
@@ -132,11 +151,11 @@ public class Game : MonoBehaviour
         instance.gameState.turnNumber++;
         instance.gameState.ChangeGuests(instance.GuestDelta);
 
-        if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber > prepTurns)
+        if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber >= prepTurns)
         {
             EndPhase();
         }
-        else if(instance.gameState.phase == GamePhase.Party && instance.gameState.turnNumber > partyTurns)
+        else if(instance.gameState.phase == GamePhase.Party && instance.gameState.turnNumber >= partyTurns)
         {
             EndPhase();
         }
