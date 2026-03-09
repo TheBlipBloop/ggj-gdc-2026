@@ -188,7 +188,7 @@ public class Game : MonoBehaviour
             Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
-            instance.gameState.turnNumber = 0;
+            instance.gameState.turnNumber = 1;
             Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeParty);
         }
@@ -197,7 +197,7 @@ public class Game : MonoBehaviour
             Events.OnPhaseEnded.Invoke(instance.gameState.phase);
             DiscardHand();
             instance.gameState.phase++;
-            instance.gameState.turnNumber = 0;
+            instance.gameState.turnNumber = 1;
             Events.OnPhaseStarted.Invoke(instance.gameState.phase);
             DrawCards(handSizeSlaughter);
         }

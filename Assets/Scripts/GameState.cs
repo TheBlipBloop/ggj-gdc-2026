@@ -13,7 +13,7 @@ public class GameState
     public int guests;
     public int sacrifices;
 
-    public int turnNumber;
+    public int turnNumber = 1;
     public GamePhase phase;
 
     public bool CanPlayCard(Card query)
