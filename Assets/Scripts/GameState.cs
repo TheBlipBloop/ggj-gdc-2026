@@ -32,13 +32,33 @@ public class GameState
         }
     }
 
-    public void ChangeGuests(int delta)
+    public int ChangeGuests(int delta, bool killing = false)
     {
         int realGuestDelta = TryChangeClammped(ref guests, delta, 0, 10000);
         if (realGuestDelta != 0)
         {
             Events.OnGuestsChanged.Invoke(realGuestDelta);
+
         }
+
+        if (realGuestDelta < 0)
+        {
+            if (killing)
+            {
+                Events.OnGuestKilled.Invoke(Mathf.Abs(realGuestDelta));
+            }
+            else
+            {
+                Events.OnGuestLeaves.Invoke(Mathf.Abs(realGuestDelta));
+            }
+        }
+
+        if (realGuestDelta > 0)
+        {
+            Events.OnGuestsAdded.Invoke(realGuestDelta);
+        }
+
+        return realGuestDelta;
     }
 
     public void ChangeSacrifices(int delta)

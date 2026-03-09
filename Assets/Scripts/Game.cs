@@ -32,7 +32,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     protected PhaseDeck[] phaseDecks;
     [SerializeField] protected Transform playPosition;
-    
+
     [SerializeField]
     protected MoodThresholds moodThresholds;
     public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
@@ -126,11 +126,21 @@ public class Game : MonoBehaviour
 
     public static void ResolveCard(Card card)
     {
+        instance.gameState.ChangeGuests(instance.GuestDelta);
+
         instance.hand.PlayCard(card);
         card.card.Apply(instance.gameState);
+
         Events.OnCardPlayed.Invoke(card);
 
+        // instance.gameState.mood = oldMood;
+
         EndTurn();
+
+        // Apply mood aftetr game state updates for Rea
+        // int inverseDelta = oldMood - newMood;
+        // instance.gameState.ChangeGuests(inverseDelta);
+        // instance.gameState.mood = newMood;
     }
 
     public static void ReplaceHand()
@@ -158,26 +168,24 @@ public class Game : MonoBehaviour
 
     public static void EndTurn()
     {
-
         instance.gameState.turnNumber++;
-        instance.gameState.ChangeGuests(instance.GuestDelta);
         Events.OnTurnEnded.Invoke(instance.gameState.turnNumber);
 
-        if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber >= prepTurns)
+        if (instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber >= prepTurns)
         {
             EndPhase();
         }
-        else if(instance.gameState.phase == GamePhase.Party && instance.gameState.turnNumber >= partyTurns)
+        else if (instance.gameState.phase == GamePhase.Party && instance.gameState.turnNumber >= partyTurns)
         {
             EndPhase();
         }
-        else if(instance.gameState.phase == GamePhase.Slaughter && instance.gameState.guests <= 0)
+        else if (instance.gameState.phase == GamePhase.Slaughter && instance.gameState.guests <= 0)
         {
             EndPhase();
         }
         else
         {
-            DrawCard();    
+            DrawCard();
         }
     }
 
@@ -215,7 +223,6 @@ public class Game : MonoBehaviour
 
     public static int GetGuestCount()
     {
-        Debug.Log("Game Over, Score: " + instance.gameState.sacrifices);
         return instance.gameState.guests;
     }
 

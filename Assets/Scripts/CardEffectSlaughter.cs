@@ -10,17 +10,13 @@ public class CardEffectSlaughter : CardEffect
 
     public int moodDelta = -2;
 
+
     public override void Apply(GameState gameState)
     {
-        int realGuestDelta = TryChangeClammped(ref gameState.guests, -maxToKill, 0, 10000);
-        if (realGuestDelta != 0)
-        {
-            gameState.guests += realGuestDelta;
-            Events.OnGuestsChanged.Invoke(realGuestDelta);
-            // gameState.ChangeGuests(realGuestDelta);
-        }
+        int delta = gameState.ChangeGuests(maxToKill, true);
+        int kills = Mathf.Abs(delta);
 
-        gameState.ChangeSacrifices(-realGuestDelta);
+        gameState.ChangeSacrifices(kills);
         gameState.ChangeMood(moodDelta);
     }
 

@@ -4,7 +4,13 @@ public static class Events
 {
     public static UnityEvent<int> OnMoodChanged = new UnityEvent<int>();
     public static UnityEvent<int> OnGuestsChanged = new UnityEvent<int>();
+    public static UnityEvent<int> OnGuestsAdded = new UnityEvent<int>();
     public static UnityEvent<int> OnSacrificesChanged = new UnityEvent<int>();
+
+    // num of killed
+    public static UnityEvent<int> OnGuestKilled = new UnityEvent<int>();
+
+    public static UnityEvent<int> OnGuestLeaves = new UnityEvent<int>();
 
     public static UnityEvent<Card> OnCardDrawn = new UnityEvent<Card>();
     public static UnityEvent<Card> OnCardPlayed = new UnityEvent<Card>();
