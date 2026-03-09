@@ -20,7 +20,7 @@ public class CardEffectSlaughter : CardEffect
             // gameState.ChangeGuests(realGuestDelta);
         }
 
-        gameState.ChangeSacrifices(realGuestDelta);
+        gameState.ChangeSacrifices(-realGuestDelta);
         gameState.ChangeMood(moodDelta);
     }
 
