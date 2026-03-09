@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Hand : MonoBehaviour
@@ -46,8 +47,17 @@ public class Hand : MonoBehaviour
             }
 
             SetCardPosition(i, cardCountSmoothed);
+
+
         }
 
+
+        // guh
+        float center = cards.Count / 2f;
+        float distance = selectedCardIndex - center;
+
+
+        // transform.eulerAngles = Vector3.forward * distance * -20f;
 
         cardCountSmoothed = Mathf.MoveTowards(cardCountSmoothed, cards.Count, Time.deltaTime * cardSmoothSpeed);
 
@@ -68,7 +78,24 @@ public class Hand : MonoBehaviour
 
         // card.transform.eulerAngles = Vector3.forward * (radialGap * -centeredOffset);
         card.transform.localPosition = Vector3.right * (gap * centeredOffset) + card.GetPositionOffset();
+        card.transform.localEulerAngles = -Vector3.forward * (radialGap * centeredOffset);
         // card.transform.position += card.transform.up * 0.1f;
+
+
+        // distance to selected
+        if (selectedCardIndex >= 0)
+        {
+            float distance = cardIndex - selectedCardIndex;
+
+            if (distance > 0 && cardIndex != selectedCardIndex)
+            {
+                card.transform.localPosition += Vector3.right;
+            }
+            else
+            {
+                card.transform.localPosition -= Vector3.right;
+            }
+        }
     }
 
     public Card AddCard(CardInfo card)
@@ -86,20 +113,17 @@ public class Hand : MonoBehaviour
 
     public void PlayCard(Card card)
     {
-
         DiscardCard(card);
         ResetSelection();
     }
 
     public void HoverCard(Card card)
     {
-        card.transform.localScale = Vector3.one * 1.1f;
         selectedCardIndex = GetCardIndex(card);
     }
 
     public void UnhoverCard(Card card)
     {
-        card.transform.localScale = Vector3.one;
         ResetSelection();
     }
 

@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2328090972717360327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4597851718029940149}
+  - component: {fileID: 3989105168492402355}
+  - component: {fileID: 3630993016425672365}
+  m_Layer: 0
+  m_Name: BackQuad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4597851718029940149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328090972717360327}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
+  m_LocalScale: {x: 7.14, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6881430301446940236}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!33 &3989105168492402355
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328090972717360327}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3630993016425672365
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2328090972717360327}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a41ef1ed39d7e997597d83e2e2b83476, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4483918774811811816
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,10 +244,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6756782069682101324}
+  - {fileID: 4597851718029940149}
   m_Father: {fileID: 5942544844724697746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6307693660676389499
@@ -172,7 +263,7 @@ GameObject:
   - component: {fileID: 5538140440825859105}
   - component: {fileID: 131472122295548536}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: FrontQuad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +369,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 643.04333, y: 216.13405, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6881430301446940236}
@@ -301,14 +392,15 @@ MonoBehaviour:
   card: {fileID: 0}
   front: {fileID: 3420208644487195648}
   cardImage: {fileID: 686702079169732009}
+  graphicsParent: {fileID: 6881430301446940236}
   worldMesh: {fileID: 131472122295548536}
   titleText: {fileID: 1737333348203878006}
   descriptionText: {fileID: 3501987159130330093}
   _camera: {fileID: 6254834025829576}
   _renderTextureBase: {fileID: 8400000, guid: 780a0556ef43455deaab37a7b733beba, type: 2}
-  hoverScale: 1.2
-  hoverPositionOffset: {x: 0, y: 0.25, z: -0.5}
-  baseScale: 1
+  hoverScale: 0.9
+  hoverPositionOffset: {x: 0, y: 6, z: -1}
+  baseScale: 0.75
   onStartHover:
     m_PersistentCalls:
       m_Calls: []
@@ -347,6 +439,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5942544844724697746}
     m_Modifications:
+    - target: {fileID: 905989722038043635, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 905989722038043635, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 2098040901313956625, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -426,6 +526,50 @@ PrefabInstance:
     - target: {fileID: 2098040901313956625, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_text
+      value: Murder on the dance floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_margin.w
+      value: -18.385468
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_lineSpacing
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_characterHorizontalScale
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Name

@@ -33,7 +33,6 @@ public class Game : MonoBehaviour
     protected PhaseDeck[] phaseDecks;
     [SerializeField] protected Transform playPosition;
 
-    [SerializeField]
     public MoodThresholds moodThresholds;
     public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
     public int MinMood => moodThresholds.thresholds[0].threshold;
@@ -116,10 +115,13 @@ public class Game : MonoBehaviour
             return false;
         }
 
-        card.transform.DOMove(instance.playPosition.position, 0.5f).OnComplete(() =>
+        card.GetGraphicsTransform().DOLocalMoveY(12f, 0.35f).OnComplete(() =>
         {
             ResolveCard(card);
         });
+
+        bool ccw = Random.Range(0f, 1f) > 0.5f;
+        card.GetGraphicsTransform().DORotate(Vector3.forward * Random.Range(50f, 300f) * (ccw ? -1f : 1f), 1f);
 
         return true;
     }

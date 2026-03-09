@@ -195,8 +195,12 @@ MonoBehaviour:
   restDurationMax: 8
   graphicsParent: {fileID: 8933949434829380889}
   guestTextures:
-  - {fileID: 2800000, guid: 98b85de5e8222396a90b9348f6fe6104, type: 3}
-  - {fileID: 2800000, guid: 72dad62b6bfc3ba4a9915430ac3efd4f, type: 3}
-  - {fileID: 2800000, guid: 660cb7c3faa058f1b812eec96941f4cb, type: 3}
+  - guest: {fileID: 2800000, guid: 1e0dbdd1024a7eaa6bd588223345fc7e, type: 3}
+    corpse: {fileID: 2800000, guid: 5c7b9974260fb0a9aba3efb5ae44076e, type: 3}
+  - guest: {fileID: 2800000, guid: 72dad62b6bfc3ba4a9915430ac3efd4f, type: 3}
+    corpse: {fileID: 2800000, guid: 3d6d974e68ccfe9c1830ff07b975e373, type: 3}
+  - guest: {fileID: 2800000, guid: 98b85de5e8222396a90b9348f6fe6104, type: 3}
+    corpse: {fileID: 2800000, guid: e70eddc67658099a5875713095414276, type: 3}
   meshRenderer: {fileID: 4737935340918016420}
+  exitTint: {r: 0.7, g: 0.7, b: 0.7, a: 1}
   corpsePrefab: {fileID: 9016632934684684073, guid: 865632434fe08123f80c76b7ae4375d3, type: 3}
