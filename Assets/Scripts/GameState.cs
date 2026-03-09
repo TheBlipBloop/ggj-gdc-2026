@@ -28,7 +28,6 @@ public class GameState
         int realMoodDelta = TryChangeClammped(ref mood, delta, Game.instance.MinMood, Game.instance.MaxMood);
         if (realMoodDelta != 0)
         {
-            mood += realMoodDelta;
             Events.OnMoodChanged.Invoke(realMoodDelta);
         }
     }
@@ -47,7 +46,6 @@ public class GameState
         int realSacrificeDelta = TryChangeClammped(ref sacrifices, delta, 0, 100000);
         if (realSacrificeDelta != 0)
         {
-            sacrifices += realSacrificeDelta;
             Events.OnSacrificesChanged.Invoke(realSacrificeDelta);
         }
     }
