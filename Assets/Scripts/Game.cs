@@ -1,4 +1,5 @@
 using System.Diagnostics.Tracing;
+using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -30,6 +31,7 @@ public class Game : MonoBehaviour
     [Header("Data")]
     [SerializeField]
     protected PhaseDeck[] phaseDecks;
+    [SerializeField] protected Transform playPosition;
     
     [SerializeField]
     protected MoodThresholds moodThresholds;
@@ -114,13 +116,21 @@ public class Game : MonoBehaviour
             return false;
         }
 
+        card.transform.DOMove(instance.playPosition.position, 0.5f).OnComplete(() =>
+        {
+            ResolveCard(card);
+        });
+
+        return true;
+    }
+
+    public static void ResolveCard(Card card)
+    {
         instance.hand.PlayCard(card);
         card.card.Apply(instance.gameState);
         Events.OnCardPlayed.Invoke(card);
 
         EndTurn();
-
-        return true;
     }
 
     public static void ReplaceHand()
