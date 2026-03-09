@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class PhaseUI : MonoBehaviour
 {
     [SerializeField] private Transform wheel;
+    [SerializeField] private float duration;
+    [SerializeField] private Ease wheelEase;
 
     private Dictionary<GamePhase, float> phaseRotations = new Dictionary<GamePhase, float>
     {
@@ -26,7 +29,8 @@ public class PhaseUI : MonoBehaviour
     {
         if (phaseRotations.TryGetValue(phase, out float targetRotation))
         {
-            wheel.localRotation = Quaternion.Euler(0f, 0f, targetRotation);
+            //wheel.localRotation = Quaternion.Euler(0f, 0f, targetRotation);
+            wheel.DORotate(new Vector3(0f, 0f, targetRotation), duration, RotateMode.FastBeyond360).SetEase(wheelEase);
         }
     }
 
