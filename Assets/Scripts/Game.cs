@@ -161,6 +161,7 @@ public class Game : MonoBehaviour
 
         instance.gameState.turnNumber++;
         instance.gameState.ChangeGuests(instance.GuestDelta);
+        Events.OnTurnEnded.Invoke(instance.gameState.turnNumber);
 
         if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber >= prepTurns)
         {
