@@ -28,7 +28,7 @@ public class Hand : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cards.Clear();
+        // cards.Clear();
     }
 
     // Update is called once per frame
@@ -78,35 +78,39 @@ public class Hand : MonoBehaviour
 
         int newCardIndex = cards.Count - 1;
 
-        newCard.onStartHover.AddListener(() => HoverCard(newCardIndex));
-        newCard.onStopHover.AddListener(() => UnhoverCard(newCardIndex));
+        newCard.onStartHover.AddListener(() => HoverCard(newCard));
+        newCard.onStopHover.AddListener(() => UnhoverCard(newCard));
 
         return newCard;
     }
 
     public void PlayCard(Card card)
     {
-        
+
         DiscardCard(card);
         ResetSelection();
     }
 
-    public void HoverCard(int index)
+    public void HoverCard(Card card)
     {
-        GetCard(index).transform.localScale = Vector3.one * 1.1f;
-        selectedCardIndex = index;
+        card.transform.localScale = Vector3.one * 1.1f;
+        selectedCardIndex = GetCardIndex(card);
     }
 
-    public void UnhoverCard(int index)
+    public void UnhoverCard(Card card)
     {
-        GetCard(index).transform.localScale = Vector3.one;
+        card.transform.localScale = Vector3.one;
         ResetSelection();
     }
 
     protected Card GetCard(int index)
     {
-
         return cards[index];
+    }
+
+    protected int GetCardIndex(Card query)
+    {
+        return cards.IndexOf(query);
     }
 
     public void DiscardHand()

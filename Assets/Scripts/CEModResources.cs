@@ -1,32 +1,52 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 
 [CreateAssetMenu(fileName = "CEModResources", menuName = "Scriptable Objects/CEModResources")]
 public class CEModResources : CardEffect
 {
-    public int GuestsDelta;
+    public int GuestsDelta; // if killing, adds to sacrifice automatically. Ask B.
     public int MoodDelta;
     public int SacrificesDelta;
 
     public override void Apply(GameState gameState)
     {
-        gameState.guests += GuestsDelta;
-
-        if(GuestsDelta != 0)
+        int realGuestDelta = TryChangeClammped(ref gameState.guests, GuestsDelta, 0, 10000);
+        if (realGuestDelta != 0)
         {
-            Events.OnGuestsChanged.Invoke(GuestsDelta);
+            Events.OnGuestsChanged.Invoke(realGuestDelta);
+
+            // bad code 
+            if (realGuestDelta < 0)
+            {
+                int guh = TryChangeClammped(ref gameState.sacrifices, -realGuestDelta, 0, 100000);
+                if (guh != 0)
+                {
+                    Events.OnSacrificesChanged.Invoke(guh);
+                }
+            }
         }
 
-        gameState.mood += MoodDelta;
-        if(MoodDelta != 0)
+
+        // TODO : Get real numbers from these from design group
+        int realMoodDelta = TryChangeClammped(ref gameState.mood, MoodDelta, -10, 4);
+        if (realMoodDelta != 0)
         {
-            Events.OnMoodChanged.Invoke(MoodDelta);
+            Events.OnMoodChanged.Invoke(realMoodDelta);
         }
 
-        gameState.sacrifices += SacrificesDelta;
-        if(SacrificesDelta != 0)
+        int realSacrificeDelta = TryChangeClammped(ref gameState.sacrifices, SacrificesDelta, 0, 100000);
+        if (realSacrificeDelta != 0)
         {
-            Events.OnSacrificesChanged.Invoke(SacrificesDelta);
+            Events.OnSacrificesChanged.Invoke(realSacrificeDelta);
         }
+    }
+
+    // ret @delta
+    private int TryChangeClammped(ref int target, int delta, int min, int max)
+    {
+        int prev = target;
+        target = Mathf.Clamp(target + delta, min, max);
+        return target - prev;
     }
 }

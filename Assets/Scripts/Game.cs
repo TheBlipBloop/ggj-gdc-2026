@@ -50,6 +50,10 @@ public class Game : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
         StartGame();
     }
 
@@ -148,6 +152,11 @@ public class Game : MonoBehaviour
     public static void EndGame()
     {
         //TO DO
+    }
+
+    public static int GetGuestCount()
+    {
+        return instance.gameState.guests;
     }
 
 }
