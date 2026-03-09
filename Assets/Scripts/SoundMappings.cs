@@ -13,7 +13,9 @@ public enum SoundEvent
     CardDiscarded,
     TurnEnded,
     PhaseEnded,
-    PhaseStarted
+    PhaseStarted,
+    CardPlayedSlaughter,
+    CardPlayedParty
 }
 
 [System.Serializable]
