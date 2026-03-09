@@ -23,6 +23,12 @@ public class Game : MonoBehaviour
 
     [SerializeField]
     protected DeckInfo deck;
+    
+    [SerializeField]
+    protected MoodThresholds moodThresholds;
+    public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
+    public int MinMood => moodThresholds.thresholds[0].threshold;
+    public int MaxMood => moodThresholds.thresholds[moodThresholds.thresholds.Length - 1].threshold;
 
     [SerializeField]
     protected GameObject cardPrefab;
@@ -122,7 +128,9 @@ public class Game : MonoBehaviour
 
     public static void EndTurn()
     {
+
         instance.gameState.turnNumber++;
+        instance.gameState.ChangeGuests(instance.GuestDelta);
 
         if(instance.gameState.phase == GamePhase.Prep && instance.gameState.turnNumber > prepTurns)
         {

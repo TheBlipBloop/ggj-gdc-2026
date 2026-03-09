@@ -44,4 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1193e03598e4d1c91903fd5123f938fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameUtils
+  deck: {fileID: 0}
+  moodThresholds: {fileID: 11400000, guid: eb2cb5fa4c62849f48cd645c31d17ae9, type: 2}
   cardPrefab: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+  hand: {fileID: 0}
+  onCardPlayedListener:
+    m_PersistentCalls:
+      m_Calls: []

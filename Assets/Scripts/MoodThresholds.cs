@@ -11,4 +11,22 @@ public class MoodThreshold
 public class MoodThresholds : ScriptableObject
 {
     public MoodThreshold[] thresholds;
+
+    public int GetGuestDelta(int mood)
+    {
+        int guestDelta = thresholds[0].guestDelta;
+        
+        foreach (var moodThreshold in thresholds)
+        {
+            if (mood >= moodThreshold.threshold)
+            {
+                guestDelta = moodThreshold.guestDelta;
+            }
+            else
+            {
+                break;
+            }
+        }
+        return guestDelta;
+    }
 }

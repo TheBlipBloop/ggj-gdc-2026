@@ -22,4 +22,41 @@ public class GameState
 
         return true;
     }
+
+    public void ChangeMood(int delta)
+    {
+        int realMoodDelta = TryChangeClammped(ref mood, delta, Game.instance.MinMood, Game.instance.MaxMood);
+        if (realMoodDelta != 0)
+        {
+            mood += realMoodDelta;
+            Events.OnMoodChanged.Invoke(realMoodDelta);
+        }
+    }
+
+    public void ChangeGuests(int delta)
+    {
+        int realGuestDelta = TryChangeClammped(ref guests, delta, 0, 10000);
+        if (realGuestDelta != 0)
+        {
+            guests += realGuestDelta;
+            Events.OnGuestsChanged.Invoke(realGuestDelta);
+        }
+    }
+
+    public void ChangeSacrifices(int delta)
+    {
+        int realSacrificeDelta = TryChangeClammped(ref sacrifices, delta, 0, 100000);
+        if (realSacrificeDelta != 0)
+        {
+            sacrifices += realSacrificeDelta;
+            Events.OnSacrificesChanged.Invoke(realSacrificeDelta);
+        }
+    }
+
+    private int TryChangeClammped(ref int target, int delta, int min, int max)
+    {
+        int prev = target;
+        target = Mathf.Clamp(target + delta, min, max);
+        return target - prev;
+    }
 }
