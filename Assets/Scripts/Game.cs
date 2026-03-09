@@ -50,6 +50,7 @@ public class Game : MonoBehaviour
     void Awake()
     {
         instance = this;
+        StartGame();
     }
 
     public static void StartGame()
@@ -84,7 +85,7 @@ public class Game : MonoBehaviour
         instance.hand.PlayCard(card);
         Events.OnCardPlayed.Invoke(card);
 
-        // EndTurn();
+        EndTurn();
 
         return true;
     }
