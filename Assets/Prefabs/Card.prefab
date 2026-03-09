@@ -301,6 +301,7 @@ MonoBehaviour:
   card: {fileID: 0}
   front: {fileID: 3420208644487195648}
   titleText: {fileID: 1737333348203878006}
+  descriptionText: {fileID: 3501987159130330093}
   _camera: {fileID: 6254834025829576}
   _renderTextureBase: {fileID: 8400000, guid: 780a0556ef43455deaab37a7b733beba, type: 2}
   hoverScale: 1.2
@@ -424,6 +425,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4833020386972651774, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 37.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Name
       value: CardCanvasBase
@@ -432,14 +465,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 6254834025829576}
-    - target: {fileID: 8189265055352069483, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 8189265055352069483, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 350
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -472,3 +497,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+--- !u!114 &3501987159130330093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+  m_PrefabInstance: {fileID: 441068272750377062}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI

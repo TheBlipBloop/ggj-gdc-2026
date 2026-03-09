@@ -51,7 +51,7 @@ public class Hand : MonoBehaviour
 
         cardCountSmoothed = Mathf.MoveTowards(cardCountSmoothed, cards.Count, Time.deltaTime * cardSmoothSpeed);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && selectedCardIndex >= 0)//&& selectedCardIndex < cards.Count)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && selectedCardIndex >= 0 && selectedCardIndex < cards.Count)
         {
             Game.PlayCard(cards[selectedCardIndex]);
         }
