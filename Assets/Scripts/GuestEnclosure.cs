@@ -60,6 +60,8 @@ public class GuestEnclosure : MonoBehaviour
         newGuest.transform.position = entrance.transform.position;
         newGuest.transform.position += Vector3.up * Random.Range(guestSpawnJitterY / -2f, guestSpawnJitterY / 2f);
 
+        newGuest.SetMoveTarget(GetValidGuestPosition());
+
         return newGuest;
     }
 

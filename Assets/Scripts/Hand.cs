@@ -26,6 +26,8 @@ public class Hand : MonoBehaviour
 
     private int selectedCardIndex = -1;
 
+    private float selectCooldownTimer = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -56,8 +58,6 @@ public class Hand : MonoBehaviour
         float center = cards.Count / 2f;
         float distance = selectedCardIndex - center;
 
-
-        // transform.eulerAngles = Vector3.forward * distance * -20f;
 
         cardCountSmoothed = Mathf.MoveTowards(cardCountSmoothed, cards.Count, Time.deltaTime * cardSmoothSpeed);
 
