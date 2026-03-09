@@ -4,6 +4,7 @@ using TMPro;
 public class CorpseUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI corpseCounterText;
+    [SerializeField] private CanvasGroup canvasGroup;
 
     void OnEnable()
     {
@@ -19,5 +20,6 @@ public class CorpseUI : MonoBehaviour
     {
         int currentCorpseCount = Game.instance.gameState.sacrifices;
         corpseCounterText.text = currentCorpseCount.ToString();
+        canvasGroup.alpha = currentCorpseCount > 0 ? 1f : 0f;
     }
 }
