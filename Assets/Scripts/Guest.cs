@@ -14,8 +14,16 @@ public class Guest : MonoBehaviour
     [SerializeField]
     protected Transform graphicsParent;
 
+    [System.Serializable]
+    protected struct GuestTextureSet
+    {
+        public Texture2D guest;
+        public Texture2D corpse;
+
+    }
+
     [SerializeField]
-    protected Texture2D[] guestTextures;
+    protected GuestTextureSet[] guestTextures;
 
     [SerializeField]
     protected MeshRenderer meshRenderer;
@@ -45,10 +53,13 @@ public class Guest : MonoBehaviour
     [SerializeField]
     protected GameObject corpsePrefab;
 
+    private int textureSetIndex = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        meshRenderer.material.mainTexture = guestTextures[Random.Range(0, guestTextures.Length)];
+        textureSetIndex = Random.Range(0, guestTextures.Length);
+        meshRenderer.material.mainTexture = guestTextures[textureSetIndex].guest;
     }
 
     // Update is called once per frame
@@ -122,6 +133,7 @@ public class Guest : MonoBehaviour
         // Destroy, spawn corpse, oowy goowy sound  TODO
         Destroy(gameObject);
         GameObject corpse = Instantiate(corpsePrefab, transform.position, transform.rotation);
+        corpse.GetComponent<Corpse>().SetCorpseTexture(guestTextures[textureSetIndex].corpse);
     }
 
     public void SetMoveTarget(Vector3 newTarget)
