@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
   m_Name: Show and Tell
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
-  FrontTexture: {fileID: 2800000, guid: 0d19ebaa1e3d340d9a28eadbe550745e, type: 3}
+  FrontTexture: {fileID: 2800000, guid: 3f6afa6ec141644c09d4c285eaec9ad7, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Show & Tell
   cardImage: {fileID: 0}
   Description: Guests -2 Mood+1
   Effects:
   - {fileID: 11400000, guid: bc8192a544b1a484aa40cae1fd403e2a, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10

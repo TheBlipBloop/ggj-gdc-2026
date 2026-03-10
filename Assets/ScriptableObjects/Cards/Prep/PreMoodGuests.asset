@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
   m_Name: PreMoodGuests
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
-  FrontTexture: {fileID: 2800000, guid: 81359753db0a8feaabca3c783bd801fa, type: 3}
+  FrontTexture: {fileID: 2800000, guid: 179ca8faf85714f4986ad9d8dc1f9a53, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Balanced Party
+  cardImage: {fileID: 0}
   Description: 'Mood +3
 
     Guests +2'
   Effects:
   - {fileID: 11400000, guid: f4ee3edb737174cc588e18194b23bae4, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10
