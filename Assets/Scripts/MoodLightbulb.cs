@@ -5,8 +5,10 @@ public class MoodLightbulb : MonoBehaviour
 {
 
     [SerializeField] private Image image;
-    [SerializeField] private GameObject glow;
+    [SerializeField] private Image glow;
     public int moodValue;
+
+    public Gradient colors;
 
     public bool Lit
     {
@@ -14,9 +16,27 @@ public class MoodLightbulb : MonoBehaviour
         set
         {
             lit = value;
-            glow.SetActive(lit);
+            glow.gameObject.SetActive(lit);
         }
     }
 
-    private bool lit;   
+    private bool lit;
+
+    public void Update()
+    {
+        // flicker
+
+        // if (Random.Range(0f, 1f) > 0.95f)
+        // {
+        // glow.SetActive(false);
+        // }
+        // else
+        // {
+        // glow.SetActive(lit);
+        // }
+
+        float pct = (float)transform.GetSiblingIndex() / (float)Game.instance.moodThresholds.thresholds.Length * 0.5f;
+        print(pct);
+        glow.color = colors.Evaluate(pct);
+    }
 }

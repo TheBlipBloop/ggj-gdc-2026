@@ -90,8 +90,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoodLightbulb
   image: {fileID: 448361833121366566}
-  glow: {fileID: 8449238184540963117}
+  glow: {fileID: 2645099849143657010}
   moodValue: 0
+  colors:
+    serializedVersion: 2
+    key0: {r: 0.990566, g: 0.4018334, b: 0.4018334, a: 1}
+    key1: {r: 0.9811321, g: 0.9398306, b: 0.46279815, a: 1}
+    key2: {r: 0.63545746, g: 0.990566, b: 0.63545746, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 33226
+    ctime2: 65076
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
 --- !u!1 &8449238184540963117
 GameObject:
   m_ObjectHideFlags: 0
