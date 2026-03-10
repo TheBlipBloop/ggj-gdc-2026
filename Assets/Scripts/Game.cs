@@ -238,7 +238,9 @@ public class Game : MonoBehaviour
 
     public IEnumerator FinishGame()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
+        FlashOverlay.Flash(Color.red, 2f);
+        yield return new WaitForSeconds(0.2f);
         instance.gameOverPopup.ShowPopup();
     }
 
