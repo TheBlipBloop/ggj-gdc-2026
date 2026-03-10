@@ -222,6 +222,7 @@ public class Game : MonoBehaviour
 
     public static void EndGame()
     {
+        instance.gameState.gameOver = true;
         instance.StartCoroutine(instance.FinishGame());
     }
 

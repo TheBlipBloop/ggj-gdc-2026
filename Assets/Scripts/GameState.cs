@@ -15,12 +15,11 @@ public class GameState
 
     public int turnNumber = 1;
     public GamePhase phase;
+    public bool gameOver = false;
 
     public bool CanPlayCard(Card query)
     {
-        // TODO
-
-        return true;
+        return !gameOver;
     }
 
     public void ChangeMood(int delta)
