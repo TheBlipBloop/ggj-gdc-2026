@@ -3,7 +3,8 @@ using UnityEngine;
 public class Guest : MonoBehaviour
 {
     [SerializeField]
-    protected float moveSpeed = 3;
+    public float moveSpeed = 3;
+    public float speeFactor = 1f;
 
     [SerializeField]
     protected float restDurationMin = 1;
@@ -46,7 +47,7 @@ public class Guest : MonoBehaviour
 
     protected State state = State.Move;
 
-    protected bool exiting = false;
+    public bool exiting = false;
 
     private float _moveTimer = 0;
 
@@ -85,7 +86,7 @@ public class Guest : MonoBehaviour
 
             SetGraphicsHeightOffset(Mathf.Sin(_moveTimer * 3f) * 0.1f);
             SetGraphicsRotation(Mathf.Cos(_moveTimer * 8f) * 15f);
-            _moveTimer += Time.deltaTime;
+            _moveTimer += Time.deltaTime * speeFactor;
         }
 
         if (state == State.Rest)

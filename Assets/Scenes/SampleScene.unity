@@ -124,6 +124,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4437450292816754135, guid: cdba41188f30c480d8f6de2ad714f8d7, type: 3}
   m_PrefabInstance: {fileID: 1138520430610044436}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &132518434 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6602169962997850924, guid: 47ce49b27d1f3115a9a8d4efe8163106, type: 3}
+  m_PrefabInstance: {fileID: 4168446672258473887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 290d76f662d2379e8bf2d545b013852d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuestEnclosure
 --- !u!1 &322564135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,6 +2271,10 @@ PrefabInstance:
       propertyPath: playPosition
       value: 
       objectReference: {fileID: 1239807809}
+    - target: {fileID: 3070782556006180698, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
+      propertyPath: guestEnclosure
+      value: 
+      objectReference: {fileID: 132518434}
     - target: {fileID: 7792482824862086792, guid: 27be70f50948f3350b23c6b5160d18ab, type: 3}
       propertyPath: m_Name
       value: Game
