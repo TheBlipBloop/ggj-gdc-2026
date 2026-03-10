@@ -17,6 +17,28 @@ MonoBehaviour:
     weight: 1
   - card: {fileID: 11400000, guid: 623cfe0d4df5c4dc58699816331b02d2, type: 2}
     weight: 1
-  - card: {fileID: 11400000, guid: cbd97e629192943cc9dbbdf6a0de1c4e, type: 2}
+  - card: {fileID: 11400000, guid: 0e9eac172f295514bbeef2a3dbf6788a, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: a314adf07f6488442a62e79ff9aca82c, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 5c226ac6a14ae3c4d8a4c308ee456fbc, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: bf7fddb0064125f40b51d130402cc6a7, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 2f04a79b670e9e144821b532467af0f8, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 4430cfcb5d6b300468ce7fe2becafe1d, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 1ec88223d18000a4093fea355db3b077, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 11eabd0b3bde6014e800789269e200ab, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 0e9eac172f295514bbeef2a3dbf6788a, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: dbf8343d465570543a2ff41efd09fa2b, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: a9e210265ace2644894f19f7d31027e0, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 2828adabccd383441af865de2cdbf38e, type: 2}
     weight: 1
   CardCount: 100

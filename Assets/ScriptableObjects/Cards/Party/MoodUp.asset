@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
   m_Name: MoodUp
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
-  FrontTexture: {fileID: 2800000, guid: 0d19ebaa1e3d340d9a28eadbe550745e, type: 3}
+  FrontTexture: {fileID: 2800000, guid: 3f6afa6ec141644c09d4c285eaec9ad7, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Mood Boost
+  Name: Mood Lighting
   cardImage: {fileID: 0}
   Description: Mood +3
   Effects:

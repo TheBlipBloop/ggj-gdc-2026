@@ -10,5 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01b5d983ab555425bad4b42661725b6a, type: 3}
-  m_Name: Redraw
+  m_Name: Redraw-2Mood
   m_EditorClassIdentifier: Assembly-CSharp::CERedraw
+  GuestsDelta: 0
+  MoodDelta: -2
+  SacrificesDelta: 0
