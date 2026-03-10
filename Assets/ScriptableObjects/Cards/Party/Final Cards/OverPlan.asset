@@ -18,8 +18,8 @@ MonoBehaviour:
   cardImage: {fileID: 21300000, guid: 963c5eb771eba465b84d81af45a8a9a5, type: 3}
   Description: 'Shuffle
 
-    Mood -2'
+    Mood -1'
   Effects:
-  - {fileID: 11400000, guid: 3e6441a25331a7c41a4d545c73ccb0d3, type: 2}
+  - {fileID: 11400000, guid: ddbe455f57813425ab2bf965b60e8e86, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10
