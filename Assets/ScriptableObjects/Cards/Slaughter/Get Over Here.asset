@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Get Over Here
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 5ac4b1d318d0d436a849129ec1ffa068, type: 3}
-  BackTexture: {fileID: 0}
-  Name: card
+  BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+  Name: Get Over Here!
   cardImage: {fileID: 0}
-  Description: really awesome playing card
-  Effects: []
+  Description: '+2 Guest
+
+    -1 Sacrifice'
+  Effects:
+  - {fileID: 11400000, guid: d5c7d4ebbc6b08749ac5c677be8a10f7, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

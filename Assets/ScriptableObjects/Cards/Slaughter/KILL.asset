@@ -16,7 +16,7 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: KILL
   cardImage: {fileID: -4111217892667582209, guid: 7c9ae53ade24af54e9fa8625029867f0, type: 3}
-  Description: Guests -3 +3 Sacrifice -4 Mood
+  Description: "Guests -3 \nSacrifice +3 \n Mood -4"
   Effects:
   - {fileID: 11400000, guid: 48ba48dfbcc89e0478961594f2040f7e, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}

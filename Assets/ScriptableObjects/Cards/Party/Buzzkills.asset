@@ -16,7 +16,7 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Buuzzkills
   cardImage: {fileID: 0}
-  Description: Guests +3 Mood -2
+  Description: "Guests +3 \nMood -2"
   Effects:
   - {fileID: 11400000, guid: 8db0ba42b5bbfad4583f5ab00b6aa632, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.09803922}

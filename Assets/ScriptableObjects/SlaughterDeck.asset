@@ -17,4 +17,12 @@ MonoBehaviour:
     weight: 1
   - card: {fileID: 11400000, guid: fc9ff7826d1651943a90e575a8e7f7e8, type: 2}
     weight: 1
+  - card: {fileID: 11400000, guid: feeda2d43a691b241b7e3352ae3c5025, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 95709b6886e3e3048bc74a0ceed1d0a8, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: 80c046d6e72088b499d11b387e907539, type: 2}
+    weight: 1
+  - card: {fileID: 11400000, guid: f6c486a92929fea489a869124609972d, type: 2}
+    weight: 1
   CardCount: 100

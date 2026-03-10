@@ -16,6 +16,8 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Get Outta Here
   cardImage: {fileID: 0}
-  Description: -2 Guests +2 Mood
+  Description: "-2 Guests \n+2 Mood"
   Effects:
   - {fileID: 11400000, guid: 7eb760c2d81905745a13b6776f9012d0, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10

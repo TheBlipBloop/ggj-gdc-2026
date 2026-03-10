@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 5ac4b1d318d0d436a849129ec1ffa068, type: 3}
   BackTexture: {fileID: 0}
-  Name: card
+  Name: Guest of Honor
   cardImage: {fileID: 0}
-  Description: really awesome playing card
+  Description: 'Guest -1
+
+    Mood -2
+
+    Sacrifice +1'
   Effects: []
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

@@ -16,7 +16,11 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Sacrifice
   cardImage: {fileID: 0}
-  Description: Guest -4 -5 Mood +4 Sacrifice
+  Description: 'Guest -4
+
+    Mood -5
+
+    Sacrifice +4'
   Effects:
   - {fileID: 11400000, guid: 59d15a445062b0747b23ebd13ed3dd1d, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
