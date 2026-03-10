@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 676140f53ac8d4cbfb71020556cd8ffe, type: 3}
-  m_Name: Life of the Party
+  m_Name: PuppetShow
   m_EditorClassIdentifier: Assembly-CSharp::CEModResources
-  GuestsDelta: 1
-  MoodDelta: 1
+  GuestsDelta: 0
+  MoodDelta: 2
   SacrificesDelta: -1

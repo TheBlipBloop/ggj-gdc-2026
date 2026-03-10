@@ -16,7 +16,7 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Pump Up the Jam!
   cardImage: {fileID: 4886391433055393945, guid: 08dd22f0ec52f4f24842c21252074dc3, type: 3}
-  Description: +1 Mood
+  Description: Mood +1
   Effects:
   - {fileID: 11400000, guid: 087a7540a09385d40a01b1ea50124c34, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}

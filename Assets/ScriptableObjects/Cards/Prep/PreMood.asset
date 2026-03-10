@@ -16,8 +16,10 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Intimate Affair
   cardImage: {fileID: 0}
-  Description: Mood +5
+  Description: 'Mood +5
+
+    1 Guest'
   Effects:
-  - {fileID: 11400000, guid: 7baceae46eee842bca3b187d7e358605, type: 2}
+  - {fileID: 11400000, guid: 357d3f00533a840a2a63975320b26f26, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

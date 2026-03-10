@@ -16,9 +16,10 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Puppet Show
   cardImage: {fileID: 809387167911689768, guid: 04adb2ea02cc6e6459ec5d0cbc853113, type: 3}
-  Description: 'Mood +4
+  Description: 'Kills -1
 
-    Sacrifice -1'
-  Effects: []
+    Mood +2'
+  Effects:
+  - {fileID: 11400000, guid: 27c390fdb5f0243b5a2365085ca16db8, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

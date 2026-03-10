@@ -16,7 +16,7 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: The Bouncer
   cardImage: {fileID: 6109292370943478083, guid: 3d0d5476497d57d4cb35675ebb3a968d, type: 3}
-  Description: "Guests -2 \nMood+1"
+  Description: "Guests -1 \nMood +3"
   Effects:
   - {fileID: 11400000, guid: bc8192a544b1a484aa40cae1fd403e2a, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}

@@ -18,7 +18,7 @@ MonoBehaviour:
   cardImage: {fileID: 0}
   Description: 'Mood +3
 
-    Guests +2'
+    2 Guests'
   Effects:
   - {fileID: 11400000, guid: f4ee3edb737174cc588e18194b23bae4, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}

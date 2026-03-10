@@ -10,14 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
-  m_Name: KILL
+  m_Name: Haruspicy
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 5ac4b1d318d0d436a849129ec1ffa068, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Haruspicy
   cardImage: {fileID: -4111217892667582209, guid: 7c9ae53ade24af54e9fa8625029867f0, type: 3}
-  Description: "Guests -3 \nSacrifice +3 \n Mood -4\nShuffle"
+  Description: 'Kill 3
+
+    Mood -4
+
+    Shuffle'
   Effects:
-  - {fileID: 11400000, guid: 48ba48dfbcc89e0478961594f2040f7e, type: 2}
+  - {fileID: 11400000, guid: afc3b6e22a6a948d6a7e8d8890062459, type: 2}
+  - {fileID: 11400000, guid: 20474ad4169464d4e987d47a62145809, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

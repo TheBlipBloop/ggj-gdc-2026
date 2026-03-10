@@ -16,12 +16,10 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: For the Gods
   cardImage: {fileID: 0}
-  Description: 'Guest -2
+  Description: 'Kill 4
 
-    Mood -5
-
-    Sacrifice +4'
+    Mood -5'
   Effects:
-  - {fileID: 11400000, guid: aea373f49fd1e554b9aa2bfcf79d8bf6, type: 2}
+  - {fileID: 11400000, guid: 42257ae61399a49d9847146538b5aa3a, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10

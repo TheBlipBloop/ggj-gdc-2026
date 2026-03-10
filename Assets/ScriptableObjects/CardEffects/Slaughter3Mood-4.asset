@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676140f53ac8d4cbfb71020556cd8ffe, type: 3}
-  m_Name: Life of the Party
-  m_EditorClassIdentifier: Assembly-CSharp::CEModResources
-  GuestsDelta: 1
-  MoodDelta: 1
-  SacrificesDelta: -1
+  m_Script: {fileID: 11500000, guid: 69c216ba3e92dd13486b123f0b2f02ba, type: 3}
+  m_Name: Slaughter3Mood-4
+  m_EditorClassIdentifier: Assembly-CSharp::CardEffectSlaughter
+  maxToKill: 3
+  moodDelta: -4

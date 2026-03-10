@@ -16,7 +16,7 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Party Pooper
   cardImage: {fileID: 9157801543025242175, guid: c6ec4ed37270e834cbd696726cd3265d, type: 3}
-  Description: '+1 Guest
+  Description: 'Guests +1
 
     Mood -2'
   Effects:
