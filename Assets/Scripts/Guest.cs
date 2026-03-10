@@ -104,6 +104,11 @@ public class Guest : MonoBehaviour
         {
             // Do nothing until told to by the enclosure
         }
+
+
+        // Vector3 originalPosition = graphicsParent.localPosition;
+        // Vector3 sortedPosition = new Vector3(originalPosition.x, originalPosition.y, originalPosition.y / 100f);
+        // graphicsParent.localPosition = sortedPosition;
     }
 
     private void Move(out bool moveComplete)

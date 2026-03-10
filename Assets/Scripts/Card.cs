@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -55,13 +56,16 @@ public class Card : MonoBehaviour
     void Start()
     {
         // graphicsParent.localEulerAngles
-        // graphicsParent.localEulerAngles = Vector3.up * 280f;
+        graphicsParent.localEulerAngles = Vector3.up * 180;
+        _positionOffset = new Vector3(0, -6, 0);
+
+        // graphicsParent.localPosition = new Vector3(0, -1, 0);
+        graphicsParent.DOLocalRotate(Vector3.zero, 0.9f);
     }
 
     void Update()
     {
         // graphicsParent.localEulerAngles = Vector3.MoveTowards(graphicsParent.localEulerAngles, Vector3.zero, Time.deltaTime * 100);
-
     }
 
     public void UpdateHovered()
