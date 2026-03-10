@@ -91,7 +91,11 @@ public class Game : MonoBehaviour
     public static void StartGame()
     {
         instance.gameState = new GameState();
-        DrawCards(handSizePrep);
+        var startingDeck = GetDeckForPhase(instance.gameState.phase);
+        foreach (var cardEntry in startingDeck.CardEntries)
+        {
+            DrawSpecificCard(cardEntry.card);
+        }
     }
 
     public static void DrawCards(int count)
@@ -107,6 +111,12 @@ public class Game : MonoBehaviour
     {
         var newCardInfo = GetDeckForPhase(instance.gameState.phase).DrawCard();
         var newCard = instance.hand.AddCard(newCardInfo);
+        return newCard;
+    }
+
+    public static Card DrawSpecificCard(CardInfo cardInfo)
+    {
+        var newCard = instance.hand.AddCard(cardInfo);
         return newCard;
     }
 

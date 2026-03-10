@@ -14,7 +14,7 @@ public class DeckInfo : ScriptableObject
     }
 
     [SerializeField]
-    protected CardEntry[] CardEntries;
+    public CardEntry[] CardEntries;
 
     [SerializeField]
     protected int CardCount = 100;
