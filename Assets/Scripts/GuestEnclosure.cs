@@ -50,6 +50,24 @@ public class GuestEnclosure : MonoBehaviour
         }
     }
 
+    public bool GuestsAreLeaving()
+    {
+        foreach (var guest in guests)
+        {
+            if (guest.exiting)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public int GetGuestCount()
+    {
+        return guests.Count;
+    }
+
     public Guest AddGuest()
     {
         GameObject newGuestObject = Instantiate(guestPrefab) as GameObject;
@@ -87,6 +105,7 @@ public class GuestEnclosure : MonoBehaviour
     protected void ExitGuest(Guest target)
     {
         target.SetMoveTarget(entrance.position);
+        target.speeFactor = 5f;
         target.SetAsExiting();
         guests.Remove(target);
     }

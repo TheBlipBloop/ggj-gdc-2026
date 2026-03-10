@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Diagnostics.Tracing;
 using DG.Tweening;
 using TMPro;
@@ -38,8 +39,8 @@ public class Game : MonoBehaviour
     public int MinMood => moodThresholds.thresholds[0].threshold;
     public int MaxMood => moodThresholds.thresholds[moodThresholds.thresholds.Length - 1].threshold;
 
-    [SerializeField]
-    protected GameObject cardPrefab;
+    [SerializeField] protected GameObject cardPrefab;
+    [SerializeField] protected GuestEnclosure guestEnclosure;
 
     [Header("Game")]
 
@@ -220,6 +221,12 @@ public class Game : MonoBehaviour
 
     public static void EndGame()
     {
+        instance.StartCoroutine(instance.FinishGame());
+    }
+
+    public IEnumerator FinishGame()
+    {
+        yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

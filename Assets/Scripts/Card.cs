@@ -52,6 +52,18 @@ public class Card : MonoBehaviour
 
     private Vector3 _positionOffset = Vector3.zero;
 
+    void Start()
+    {
+        // graphicsParent.localEulerAngles
+        // graphicsParent.localEulerAngles = Vector3.up * 280f;
+    }
+
+    void Update()
+    {
+        // graphicsParent.localEulerAngles = Vector3.MoveTowards(graphicsParent.localEulerAngles, Vector3.zero, Time.deltaTime * 100);
+
+    }
+
     public void UpdateHovered()
     {
         float uniformScale = graphicsParent.localScale.x;
