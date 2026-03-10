@@ -33,6 +33,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     protected PhaseDeck[] phaseDecks;
     [SerializeField] protected Transform playPosition;
+    public GameOverPopup gameOverPopup;
 
     public MoodThresholds moodThresholds;
     public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
@@ -226,8 +227,8 @@ public class Game : MonoBehaviour
 
     public IEnumerator FinishGame()
     {
-        yield return new WaitForSeconds(6f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(5f);
+        instance.gameOverPopup.ShowPopup();
     }
 
     public static int GetGuestCount()
