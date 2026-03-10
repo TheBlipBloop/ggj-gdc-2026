@@ -26,6 +26,8 @@ public class Hand : MonoBehaviour
 
     private int selectedCardIndex = -1;
 
+    private int hoveredCard = -1;
+
     private float selectCooldownTimer = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,6 +67,8 @@ public class Hand : MonoBehaviour
         {
             Game.PlayCard(cards[selectedCardIndex]);
         }
+
+
     }
 
     protected void SetCardPosition(float cardIndex, float cardCount)
