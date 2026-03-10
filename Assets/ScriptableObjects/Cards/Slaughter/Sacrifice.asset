@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
-  m_Name: KILL
+  m_Name: Sacrifice
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 5ac4b1d318d0d436a849129ec1ffa068, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-  Name: KILL
-  cardImage: {fileID: -4111217892667582209, guid: 7c9ae53ade24af54e9fa8625029867f0, type: 3}
-  Description: Guests -3 +3 Sacrifice -4 Mood
+  Name: Sacrifice
+  cardImage: {fileID: 0}
+  Description: Guest -4 -5 Mood +4 Sacrifice
   Effects:
-  - {fileID: 11400000, guid: 48ba48dfbcc89e0478961594f2040f7e, type: 2}
+  - {fileID: 11400000, guid: 59d15a445062b0747b23ebd13ed3dd1d, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10
