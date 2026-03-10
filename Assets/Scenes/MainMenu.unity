@@ -1733,49 +1733,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4014480136126060935, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4578119919550659241, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7067450850983154707, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
       propertyPath: m_Name
       value: ViewerDiscretionWarning
-      objectReference: {fileID: 0}
-    - target: {fileID: 8960399178700197521, guid: 55973feaf3734f69888506bc7d96df40, type: 3}
-      propertyPath: m_Color.a
-      value: 0.32941177
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
