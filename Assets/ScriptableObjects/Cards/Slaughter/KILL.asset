@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
-  m_Name: Bear Bringer
+  m_Name: KILL
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
-  FrontTexture: {fileID: 2800000, guid: 3f6afa6ec141644c09d4c285eaec9ad7, type: 3}
+  FrontTexture: {fileID: 2800000, guid: 5ac4b1d318d0d436a849129ec1ffa068, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Beer Bringer
+  Name: KILL
   cardImage: {fileID: 0}
-  Description: Guests +1 Mood +1
+  Description: Guests -3 +3 Sacrifice -4 Mood
   Effects:
-  - {fileID: 11400000, guid: 2c424544ad4dbb44b92c6a9e34827a79, type: 2}
+  - {fileID: 11400000, guid: 48ba48dfbcc89e0478961594f2040f7e, type: 2}
