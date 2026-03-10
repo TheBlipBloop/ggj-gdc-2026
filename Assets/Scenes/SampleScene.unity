@@ -1767,6 +1767,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1802939187821565666, guid: facb478e9f97a8b6d962f7f66e8268d8, type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802939187821565666, guid: facb478e9f97a8b6d962f7f66e8268d8, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2276084798246579942, guid: facb478e9f97a8b6d962f7f66e8268d8, type: 3}
       propertyPath: overlay
       value: 
