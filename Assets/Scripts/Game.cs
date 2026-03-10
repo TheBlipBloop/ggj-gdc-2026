@@ -24,7 +24,7 @@ public class Game : MonoBehaviour
     public static Game instance;
 
     public static int handSizePrep = 3;
-    public static int handSizeParty = 5;
+    public static int handSizeParty = 4;
     public static int handSizeSlaughter = 3;
     public static int prepTurns = 1;
     public static int partyTurns = 9;
