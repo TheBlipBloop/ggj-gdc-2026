@@ -1402,6 +1402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoodCounter
       objectReference: {fileID: 0}
+    - target: {fileID: 2257764162703719660, guid: 8b161e7537e984e23aa01226254ce8b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7003221270714023613, guid: 8b161e7537e984e23aa01226254ce8b4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

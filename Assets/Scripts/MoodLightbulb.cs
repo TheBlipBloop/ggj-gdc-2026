@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class MoodLightbulb : MonoBehaviour
 {
-    [SerializeField] private Sprite litSprite;
-    [SerializeField] private Sprite unlitSprite;
+
     [SerializeField] private Image image;
+    [SerializeField] private GameObject glow;
     public int moodValue;
 
     public bool Lit
@@ -14,7 +14,7 @@ public class MoodLightbulb : MonoBehaviour
         set
         {
             lit = value;
-            image.sprite = value ? litSprite : unlitSprite;
+            glow.SetActive(lit);
         }
     }
 
