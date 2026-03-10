@@ -36,7 +36,6 @@ public class MoodLightbulb : MonoBehaviour
         // }
 
         float pct = (float)transform.GetSiblingIndex() / (float)Game.instance.moodThresholds.thresholds.Length * 0.5f;
-        print(pct);
         glow.color = colors.Evaluate(pct);
     }
 }
