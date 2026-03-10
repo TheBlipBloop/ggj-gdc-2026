@@ -8,7 +8,7 @@ public class Corpse : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        FlashOverlay.Flash(Color.red, 2);
     }
 
     // Update is called once per frame
