@@ -653,8 +653,8 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_Camera: {fileID: 1893501309}
+  m_PlaneDistance: 0.01
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -902,6 +902,10 @@ PrefabInstance:
     - target: {fileID: 1442079976296837624, guid: 4415faa66e93ff96fb095b31170f624c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1791578050097849586, guid: 4415faa66e93ff96fb095b31170f624c, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2479765877274291204, guid: 4415faa66e93ff96fb095b31170f624c, type: 3}
       propertyPath: m_Name
@@ -1310,6 +1314,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1836153474}
   m_CullTransparentMesh: 1
+--- !u!20 &1893501309 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8776310628955867829, guid: 4415faa66e93ff96fb095b31170f624c, type: 3}
+  m_PrefabInstance: {fileID: 1703524281}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &219354442583929278
 PrefabInstance:
   m_ObjectHideFlags: 0

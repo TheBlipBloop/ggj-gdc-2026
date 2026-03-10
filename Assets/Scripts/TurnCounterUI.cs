@@ -4,6 +4,8 @@ public class TurnCounterUI : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshProUGUI turnText;
 
+    public GameObject slaughterPhaseIndicator;
+
     void OnEnable()
     {
         Events.OnTurnEnded.AddListener(OnTurnEnded);
@@ -28,6 +30,21 @@ public class TurnCounterUI : MonoBehaviour
 
     private void UpdateTurnCounter()
     {
-        turnText.text = Game.instance.gameState.turnNumber.ToString();
+        var phase = Game.instance.gameState.phase;
+
+        if (phase == GamePhase.Prep)
+        {
+            turnText.text = (Game.prepTurns - Game.instance.gameState.turnNumber).ToString();
+        }
+        if (phase == GamePhase.Party)
+        {
+            turnText.text = (Game.partyTurns - Game.instance.gameState.turnNumber).ToString();
+        }
+
+        if (phase == GamePhase.Slaughter)
+        {
+            turnText.text = "";
+        }
+        slaughterPhaseIndicator.SetActive(phase == GamePhase.Slaughter);
     }
 }
