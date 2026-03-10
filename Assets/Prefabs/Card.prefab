@@ -439,6 +439,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5942544844724697746}
     m_Modifications:
+    - target: {fileID: 905989722038043635, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 905989722038043635, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 2098040901313956625, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -519,10 +527,58 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_text
+      value: Murder on the dance floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_margin.w
+      value: -18.385468
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_lineSpacing
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162504318523731472, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_characterHorizontalScale
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929236217203944331, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5695853301635596719, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
       propertyPath: m_Name
       value: CardCanvasBase
       objectReference: {fileID: 0}
+    - target: {fileID: 7346885134843338930, guid: 2cfed4d2de09a91458ce982e52f24882, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 6254834025829576}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
