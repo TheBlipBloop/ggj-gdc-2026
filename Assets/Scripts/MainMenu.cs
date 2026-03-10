@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
 
     public void ToggleCredits()
     {
-        creditsScreen.SetActive(creditsScreen.activeSelf);
+        creditsScreen.SetActive(!creditsScreen.activeSelf);
     }
 
     public void Quit()
