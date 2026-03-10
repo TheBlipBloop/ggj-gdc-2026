@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: For the Gods
   m_EditorClassIdentifier: Assembly-CSharp::CEModResources
   GuestsDelta: -2
-  MoodDelta: -3
-  SacrificesDelta: 2
+  MoodDelta: -5
+  SacrificesDelta: 4

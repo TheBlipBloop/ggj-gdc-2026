@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7bc93478355f6129a174bcfd1eacb00, type: 3}
-  m_Name: Party Pooper
+  m_Name: Pump Up The Jam!
   m_EditorClassIdentifier: Assembly-CSharp::CardInfo
   FrontTexture: {fileID: 2800000, guid: 3f6afa6ec141644c09d4c285eaec9ad7, type: 3}
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
-  Name: Party Pooper
-  cardImage: {fileID: 0}
-  Description: '+1 Guest
-
-    Mood -2'
+  Name: Pump Up the Jam!
+  cardImage: {fileID: 4886391433055393945, guid: 08dd22f0ec52f4f24842c21252074dc3, type: 3}
+  Description: +1 Mood
   Effects:
-  - {fileID: 11400000, guid: 96341f5b4bb1ead43a9ce4239697b462, type: 2}
+  - {fileID: 11400000, guid: 087a7540a09385d40a01b1ea50124c34, type: 2}
   Flash: {r: 1, g: 1, b: 1, a: 0.15}
   FlashDecaySpeed: 10
