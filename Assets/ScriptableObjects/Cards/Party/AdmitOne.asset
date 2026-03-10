@@ -19,3 +19,5 @@ MonoBehaviour:
   Description: Guests +1
   Effects:
   - {fileID: 11400000, guid: f3a8424e2a61d4195803e0a2365eebbd, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10

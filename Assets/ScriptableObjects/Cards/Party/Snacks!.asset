@@ -19,3 +19,5 @@ MonoBehaviour:
   Description: Mood +2
   Effects:
   - {fileID: 11400000, guid: c77c1b67e00c6b84f8631972a027d03b, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10
