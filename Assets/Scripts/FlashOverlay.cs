@@ -7,9 +7,9 @@ public class FlashOverlay : MonoBehaviour
 
     public Image overlay;
 
-    private Color overrideColor = Color.clear;
+    private Color target;
 
-
+    private Color start;
 
     private static FlashOverlay flashOverlay;
 
@@ -17,19 +17,22 @@ public class FlashOverlay : MonoBehaviour
     void Awake()
     {
         flashOverlay = this;
-        overrideColor = Color.white;
-        overrideColor.a = 0;
+
+        target = Color.clear;
+        start = Color.black;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        overlay.color = Color.Lerp(overlay.color, target, Time.deltaTime * flashDecaySpeed);
     }
 
-    public static void Flash(Color color, float duration)
+    public static void Flash(Color color, float speed)
     {
         Color colorClear = new Color(color.r, color.g, color.b, 0);
-        flashOverlay.overrideColor = colorClear;
+        flashOverlay.overlay.color = color;
+        flashOverlay.target = colorClear;
+        flashOverlay.flashDecaySpeed = speed;
     }
 }
