@@ -30,7 +30,7 @@ public class MoodMeter : MonoBehaviour
 
     public void SetMoodValue(int moodValue)
     {
-        foreach(MoodLightbulb lightbulb in lightbulbParent.GetComponentsInChildren<MoodLightbulb>())
+        foreach (MoodLightbulb lightbulb in lightbulbParent.GetComponentsInChildren<MoodLightbulb>())
         {
             lightbulb.Lit = lightbulb.moodValue <= moodValue;
         }
@@ -38,11 +38,11 @@ public class MoodMeter : MonoBehaviour
 
     private void ClearMoodBar()
     {
-        foreach(Transform child in lightbulbParent)
+        foreach (Transform child in lightbulbParent)
         {
             Destroy(child.gameObject);
         }
-        foreach(Transform child in labelParent)
+        foreach (Transform child in labelParent)
         {
             Destroy(child.gameObject);
         }
@@ -54,14 +54,14 @@ public class MoodMeter : MonoBehaviour
 
         int prevThreshold = moodThresholds.thresholds[0].threshold;
 
-        for(int i = 1; i < moodThresholds.thresholds.Length; i++)
+        for (int i = 1; i < moodThresholds.thresholds.Length; i++)
         {
             int threshold = moodThresholds.thresholds[i].threshold;
             int guestDelta = moodThresholds.thresholds[i].guestDelta;
             int span = threshold - prevThreshold;
             prevThreshold = threshold;
 
-            for(int j=0; j < span; j++)
+            for (int j = 0; j < span; j++)
             {
                 MoodLightbulb lightbulb = Instantiate(lightbulbPrefab, lightbulbParent);
                 lightbulb.moodValue = threshold - span + j + 1;

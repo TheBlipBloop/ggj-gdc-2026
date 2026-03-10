@@ -227,3 +227,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoodLabel
   label: {fileID: 3906267018231233254}
+  background: {fileID: 1340281286762500749}
