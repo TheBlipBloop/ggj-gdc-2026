@@ -16,6 +16,8 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Idea
   cardImage: {fileID: 0}
-  Description: Shuffle Mood +1
+  Description: "Shuffle \nMood +1"
   Effects:
   - {fileID: 11400000, guid: 20474ad4169464d4e987d47a62145809, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10

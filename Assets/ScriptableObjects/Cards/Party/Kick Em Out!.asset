@@ -16,5 +16,10 @@ MonoBehaviour:
   BackTexture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   Name: Kick em Out!
   cardImage: {fileID: 0}
-  Description: really awesome playing card
-  Effects: []
+  Description: 'Mood +2
+
+    Guest -1'
+  Effects:
+  - {fileID: 11400000, guid: 8a47aabb17276e344bf09fbfa3ef59e1, type: 2}
+  Flash: {r: 1, g: 1, b: 1, a: 0.15}
+  FlashDecaySpeed: 10
