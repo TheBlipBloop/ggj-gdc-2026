@@ -12,6 +12,14 @@ public class MoodThresholds : ScriptableObject
 {
     public MoodThreshold[] thresholds;
 
+    public void Test()
+    {
+        for (int i = -10; i < 11; i++)
+        {
+            Debug.Log($"Mood {i}: Guest Delta: {GetGuestDelta(i)}");
+        }
+    }
+
     public int GetGuestDelta(int mood)
     {
         int guestDelta = thresholds[0].guestDelta;

@@ -38,7 +38,7 @@ public class Game : MonoBehaviour
     public MoodThresholds moodThresholds;
     public int GuestDelta => moodThresholds.GetGuestDelta(gameState.mood);
     public int MinMood => moodThresholds.thresholds[0].threshold;
-    public int MaxMood => moodThresholds.thresholds[moodThresholds.thresholds.Length - 1].threshold;
+    public int MaxMood => 10;//moodThresholds.thresholds[moodThresholds.thresholds.Length - 1].threshold;
 
     [SerializeField] protected GameObject cardPrefab;
     [SerializeField] protected GuestEnclosure guestEnclosure;
@@ -86,6 +86,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         StartGame();
+        moodThresholds.Test();
     }
 
     public static void StartGame()

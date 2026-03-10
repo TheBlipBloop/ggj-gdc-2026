@@ -29,9 +29,11 @@ MonoBehaviour:
     guestDelta: -1
   - threshold: 0
     guestDelta: 0
-  - threshold: 3
+  - threshold: 1
     guestDelta: 1
-  - threshold: 8
+  - threshold: 4
     guestDelta: 2
-  - threshold: 10
+  - threshold: 9
+    guestDelta: 3
+  - threshold: 11
     guestDelta: 3

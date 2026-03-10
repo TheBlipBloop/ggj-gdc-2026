@@ -7,6 +7,7 @@ public class MoodLightbulb : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private Image glow;
     public int moodValue;
+    public TMPro.TextMeshProUGUI label;
 
     public Gradient colors;
 
@@ -34,7 +35,7 @@ public class MoodLightbulb : MonoBehaviour
         // {
         // glow.SetActive(lit);
         // }
-
+        //label.text = moodValue.ToString();
         float pct = (float)transform.GetSiblingIndex() / (float)Game.instance.moodThresholds.thresholds.Length * 0.5f;
         glow.color = colors.Evaluate(pct);
     }

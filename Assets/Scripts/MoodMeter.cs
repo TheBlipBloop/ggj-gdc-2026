@@ -52,21 +52,23 @@ public class MoodMeter : MonoBehaviour
     {
         ClearMoodBar();
 
-        int prevThreshold = moodThresholds.thresholds[0].threshold;
+        int minMood = moodThresholds.thresholds[0].threshold;
+        int currentMood = minMood;
 
-        for (int i = 1; i < moodThresholds.thresholds.Length; i++)
+        for (int i = 0; i < moodThresholds.thresholds.Length-1; i++)
         {
-            int threshold = moodThresholds.thresholds[i].threshold;
-            int guestDelta = moodThresholds.thresholds[i].guestDelta;
-            int span = threshold - prevThreshold;
-            prevThreshold = threshold;
+            int span = moodThresholds.thresholds[i+1].threshold - moodThresholds.thresholds[i].threshold;
 
             for (int j = 0; j < span; j++)
             {
                 MoodLightbulb lightbulb = Instantiate(lightbulbPrefab, lightbulbParent);
-                lightbulb.moodValue = threshold - span + j + 1;
+                lightbulb.moodValue = currentMood;
+                currentMood++;
             }
+            // Debug.Log($"Threshold: {threshold}, Prev Threshold: {prevThreshold}, Guest Delta: {guestDelta}, Span: {span}");
+            // prevThreshold = threshold;
 
+            int guestDelta = moodThresholds.thresholds[i].guestDelta;
             MoodLabel label = Instantiate(labelPrefab, labelParent);
             label.SetLabel(guestDelta, span);
         }
